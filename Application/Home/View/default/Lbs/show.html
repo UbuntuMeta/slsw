@@ -1,0 +1,104 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<title>{$vo.name}</title>
+<meta name="description" content="地址:{$vo.address}">
+<meta name="keywords" content="{$vo.name}-{$vo.address}">
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="MobileOptimized" content="320">
+<meta name="Iphone-content" content="320">
+<script type="text/javascript" src="http://api.map.baidu.com/api?type=quick&ak=I6pMv4th3EQGRmcEBEc8EGmD&v=1.0"></script>
+<style type="text/css">
+<style>
+body{ margin:0 auto; padding:0}
+.tit{ margin-bottom:2px;}
+.tit h1{ font-size:26px;}
+.tit p{height:18px;}
+.tests{ padding:5px; line-height:17px; font-size:12px; border:1px solid #ffeef2; margin-top:2px;-webkit-border-radius:3px; border-radius:3px;}
+.tests label{ color:#900; font-weight:bold;}
+.txt p img,.txt img{ border:0; max-width:100%}
+.footer{ position:fixed;bottom:0; height:50px;display:block; width:100%; border-top:1px solid #dddddd; line-height:35px; z-index:999; background:#eee}
+.footer a{text-decoration:none; display:block; width:50%; float:left; text-align:center; color:#000; font-size:22px; margin:10px 0}
+#allmap{ width:100%; height:350px; margin-bottom:50px;}
+</style>
+</head>
+<body>
+<div class="tit">
+      <h1>双流县地税局办税服务厅</h1>
+    </div>
+<div class="txt">
+{$ssss}
+<!--<img src="{$vo.picurl|default='/Public/images/no_logo.png'}"/>-->
+<div id="allmap"></div>
+    </div>
+<div class="txt">
+<div class="footer"><a href="tel:{$vo.tel}">{$vo.tel}</a><a href="http://api.map.baidu.com/marker?location={$vo.lat},{$vo.lng}&title={$vo.name}&content={$vo.address}&output=html">地图导航</a></div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+
+// 百度地图API功能
+var map = new BMap.Map("allmap");
+var point = new BMap.Point(104.068723,30.512274);
+map.centerAndZoom(point, 15);
+map.addControl(new BMap.ZoomControl());          //添加地图缩放控件
+var opts = {
+  width : 200,     // 信息窗口宽度
+  height: 60,     // 信息窗口高度
+  title : "双流县地税局办税服务厅" // 信息窗口标题
+}
+var marker1 = new BMap.Marker(new BMap.Point(104.068723,30.512274);  // 创建标注
+map.addOverlay(marker1);
+var infoWindow = new BMap.InfoWindow("双流县地税局办税服务厅", opts);  // 创建信息窗口对象
+map.openInfoWindow(infoWindow,point); //开启信息窗口
+</script>
+<script>
+document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+	window.shareData = {
+		"imgUrl": "{:C('HTTP_URL')}{$vo.picurl|default='/Public/images/no_logo.png'}",
+		"timeLineLink": "{:C('HTTP_URL')}{:U('Article/show',array('id'=>$vo['id']))}",
+		"sendFriendLink": "{:C('HTTP_URL')}{:U('Article/show',array('id'=>$vo['id']))}",
+		"weiboLink": "{:C('HTTP_URL')}{:U('Article/show',array('id'=>$vo['id']))}",
+		"name": "{$vo.name|html_entity_decode}",
+		"Content": "{$vo.address|html_entity_decode}",
+	};
+
+	// 发送给好友
+	WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+		WeixinJSBridge.invoke('sendAppMessage', {
+			"img_url": window.shareData.imgUrl,
+			"img_width": "640",
+			"img_height": "640",
+			"link": window.shareData.sendFriendLink,
+			"desc": window.shareData.Content,
+			"name": window.shareData.name
+		}, function (res) {
+			_report('send_msg', res.err_msg);
+		})
+	});
+
+	// 分享到朋友圈
+	WeixinJSBridge.on('menu:share:timeline', function (argv) {
+		WeixinJSBridge.invoke('shareTimeline', {
+			"img_url": window.shareData.imgUrl,
+			"img_width": "640",
+			"img_height": "640",
+			"link": window.shareData.timeLineLink,
+			"desc": window.shareData.Content,
+			"name": window.shareData.name
+		}, function (res) {
+			_report('timeline', res.err_msg);
+		});
+	});
+
+	// 分享到微博
+	WeixinJSBridge.on('menu:share:weibo', function (argv) {
+		WeixinJSBridge.invoke('shareWeibo', {
+			"content": window.shareData.Content,
+			"url": window.shareData.weiboLink
+		}, function (res) {
+			_report('weibo', res.err_msg);
+		});
+	});
+}, false)
+</script>

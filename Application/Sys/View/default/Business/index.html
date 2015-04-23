@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<link href="__CSS__/table_form.css" rel="stylesheet" type="text/css"/>
+<title>354</title>
+</head>
+<style>
+div a{padding:1px 3px; margin:3px; border:1px solid #d0d0d0; text-decoration:none}
+</style>
+<body>
+<div class="table-list">
+<table>
+	<tr class="header"> 
+    <td class="w80">编号</td>
+    <td>业务名</td>
+      <td>业务分类</td>
+      <td>业务权重值</td>
+      <td class="center w200"><a href="{:U('add')}" class="button">添加业务</a></td>
+    </tr>
+    <volist name="volist" id="item">
+    <tr> 
+      <td>{$item.business_id}</td>
+      <td>{$item.business_name}</td>
+      <td>{$item.business_parent_name}</td>
+      <td>{$item.business_value}</td>
+      <td><a href="{:U('update',array('id'=>$item['business_id']))}" class="button">编辑</a><a href="{:U('delete',array('id'=>$item['business_id']))}" onclick="return confirm('您确实要执行删除？');" class="button">删除</a> </td>
+    </tr>
+    </volist>
+    
+	<tr class="header"> 
+    <td colspan="7">{$pager_bar}</td>
+    </tr>
+</table>
+</div>
+</body>
+</html>

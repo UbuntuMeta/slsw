@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no" name="viewport">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<title>会员绑定</title>
+<link type="text/css" rel="stylesheet" href="css/css.css">
+<link href="js/jquery-1.11.1.min.js">
+
+</head>
+<body>
+
+<div class="top" >
+  <img src="image/0_04.jpg" class="logo"><b>会员绑定</b>
+</div>
+<div class="clear"></div>
+
+<div class="box">
+  <div class="enterprise">
+    
+    <ul>
+      <li><input type="text" class="ent_1" name="user_username" id="user_username" placeholder="用户名 " /></input> </li>
+      <li><input name="user_pass" type="password" class="ent_1" id="user_pass" placeholder="密码 " /></input></li>
+	   <li><input name="user_pass" type="hidden" class="ent_1" id="wecha_id" value="{$wecha_id}" /></input></li>
+      </li>
+    </ul>   
+    <button  type="button" class="nextpage" id="submit-">绑定</button>  
+  </div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+$("#submit-").on("click",function(){
+	var user_username = $("#user_username").val();
+	var user_pass = $("#user_pass").val();
+	var flag = true;
+	 if(user_username == ''){
+		layer.msg("用户名没填写哦！", 2, 3);
+		flag = false;
+	}else if(user_pass == ''){
+		layer.msg("密码没填写哦！", 2, 3);
+		flag = false;
+	}
+	else if(user_username.length<6){
+		layer.msg("用户名长度大于6！", 2, 3);
+		flag = false;
+	}else if(user_pass.length<6){
+		layer.msg("密码长度大于6！", 2, 3);
+		flag = false;
+	}
+	if(flag){
+	
+	$.post("{:U('bangdingdo')}",{'wecha_id':$("#wecha_id").val(),'user_username':$("#user_username").val(),'user_pass':$("#user_pass").val()},function(data){
+		if(data.status==1){
+			layer.msg("绑定成功", 2, 1);
+			setTimeout(function (){window.location=data.url;},1000);
+		}else{
+			layer.msg(data.content, 2, 3);
+			setTimeout(function (){$("#submit-").val("绑定");},1000);
+		}
+   },'json');
+   }
+   });
+
+</script>
+

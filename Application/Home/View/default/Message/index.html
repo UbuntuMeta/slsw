@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta
+	content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no"
+	name="viewport">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<title>双流地税留言反馈</title>
+<link type="text/css" rel="stylesheet" href="__HOMECSS__/message.css">
+<SCRIPT type="text/javascript" src="__JQ__/jquery.js"></SCRIPT>
+
+</head>
+<body>
+
+	<div class="top">
+		<img src="__HOMEIMG__/0_04.jpg" class="logo">
+		<b>留言反馈</b>
+	</div>
+	<div class="clear"></div>
+	
+	<div class="message" id="d1">
+		<img src="__HOMEIMG__/1_02.jpg">
+		请点击留言
+	</div>
+
+	<div class="clear"></div>
+	
+	<div class="box" id="d2">
+	<form action="{:U('Home/Message/add')}" method="post" onSubmit="return sub();">
+	<span id="span3"></span><br>
+		<textarea name="content" id="cont" class="bk" placeholder="  请输入留言内容"></textarea>
+		<input type="text" id="phone" name="phone" class="text1" placeholder=" 请输入手机号码"/></input>
+		<button type="submit" class="aniu">提交</button>
+	</form>		
+	</div>
+	<div class="clear"></div>
+	
+	<div class="box" id="d2">
+	<form action="{:U('Home/Message/index')}" method="post" onSubmit="return sub1();">
+	<span id="span3"></span><br>
+		<input type="text" id="phone1" name="phone" class="text1" placeholder=" 请输入手机号查看回复"/></input>
+		<button type="submit" class="aniu" >查看留言</button>
+	</form>		
+	</div>
+	<div class="clear"></div>
+	<volist name="result_msg" id="vo">
+	<div class="box">
+		<div class="biaot">
+			<b>{$vo.msg_phone}</b>
+			<span class="date">发表日期:{$vo.msg_startdate|substr=0,10}</span>
+		</div>
+		<div class="txt_zuo">
+
+		<div class="txt_a">{$vo.msg_descript}</div>
+		</div>
+		<notempty name='vo.reply_descript'>
+		<div class="txt_you">
+			<div class="txt_b">
+				<b>双流地税回复：</b>
+				{$vo.reply_descript}
+				<div class="date_hf">回复日期:{$vo.msg_date|substr=0,10}</div>
+			</div>
+
+		</div>
+		</notempty>
+	</div>
+	
+	<div class="clear"></div>
+	</volist>
+<script>
+$("#d1").bind("click", function(){
+		$("#d2").slideToggle("slow"); 
+	}); 
+</script>
+<script>
+		function sub() {
+			var str = $("#phone").val();
+			var cont = $("#cont").val();
+			var re = /^13[0-9]{9}$|14[0-9]{9}|15[0-9]{9}$|18[0-9]{9}$/;
+			if (cont == '' || str == '') {
+				alert('请输入留言内容');
+				return false;
+			}	
+			if(!(/^13[0-9]{9}$|14[0-9]{9}|15[0-9]{9}$|18[0-9]{9}$/.test(str))){
+			//if (!(re.test(str))) {
+				alert('请输入正确的手机号');
+				return false;
+			} else {
+				alert('提交成功，请等待管理员回复！');
+				return true;
+			}
+		};
+		
+		function sub1() {
+			var str = $("#phone1").val();
+			var re = /^13[0-9]{9}$|14[0-9]{9}|15[0-9]{9}$|18[0-9]{9}$/;
+			if (str == '') {
+				alert('请输入手机号');
+				return false;
+			}			
+			if (!(re.test(str))) {
+				alert('请输入正确的手机号');
+				return false;
+			} else {
+				return true;
+			}
+		};
+</script>
+</body>
+</html>
+
+

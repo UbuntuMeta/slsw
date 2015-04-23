@@ -1,0 +1,74 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<title>{$vo.name}</title>
+<meta name="description" content="{$vo.name}">
+<meta name="keywords" content="{$vo.name}">
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="MobileOptimized" content="320">
+<meta name="Iphone-content" content="320">
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<script type="text/javascript" src="http://api.map.baidu.com/api?type=quick&ak=I6pMv4th3EQGRmcEBEc8EGmD&v=1.0"></script>
+<style type="text/css">
+#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;} @media (max-device-width: 780px){#golist{display: block!important;}}#golist {display: none;}
+
+.tit{ margin-bottom:2px;}
+.tit h1{ font-size:26px;}
+.tit p{height:18px;}
+.tests{ padding:5px; line-height:17px; font-size:12px; border:1px solid #ffeef2; margin-top:2px;-webkit-border-radius:3px; border-radius:3px;}
+.tests label{ color:#900; font-weight:bold;}
+.txt p img,.txt img{ border:0; max-width:100%}
+</style>
+</head>
+<body>
+<div class="tit">
+      <h1>{$vo.name}</h1>
+      <p>地址：{$vo.address}</p>
+    </div>
+<div id="allmap">
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+
+// 百度地图API功能
+var map = new BMap.Map("allmap");
+var point = new BMap.Point(<php>echo $vo['lat']</php>,<php>echo $vo['lng']</php>);
+map.centerAndZoom(point, 15);
+map.addControl(new BMap.ZoomControl());          //添加地图缩放控件
+var opts = {
+  width : 400,     // 信息窗口宽度
+  height: 70,     // 信息窗口高度
+  title : "<php>echo $vo['name']</php>"  // 信息窗口标题
+}
+var infoWindow = new BMap.InfoWindow("<php>echo '地址：'.$vo['address'].'<br/>电话：'.$vo['tel']</php>", opts);  // 创建信息窗口对象
+map.openInfoWindow(infoWindow,point); //开启信息窗口
+
+
+var marker1 = new BMap.Marker(new BMap.Point(<php>echo $vo['lat']</php>,<php>echo $vo['lng']</php>));  // 创建标注
+map.addOverlay(marker1);              // 将标注添加到地图中
+marker1.addEventListener("click", function(){
+
+/*start|end：（必选）
+{name:string,latlng:Lnglat}
+opts:
+mode：导航模式，固定为
+BMAP_MODE_TRANSIT、BMAP_MODE_DRIVING、
+BMAP_MODE_WALKING、BMAP_MODE_NAVIGATION
+分别表示公交、驾车、步行和导航，（必选）
+region：城市名或县名  当给定region时，认为起点和终点都在同一城市，除非单独给定起点或终点的城市
+origin_region/destination_region：同上
+*/
+	
+	var start = {
+	     name:"王府井"
+	}
+	var end = {
+	    name:"<php>echo $vo['address']</php>"
+	}
+	var opts = {
+	    mode:BMAP_MODE_DRIVING,
+	}
+	var ss = new BMap.RouteSearch();
+	ss.routeCall(start,end,opts);
+});
+</script>

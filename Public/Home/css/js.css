@@ -1,0 +1,57 @@
+html, body {
+  width: 100%;
+  height: 100%;}
+
+html {
+  background: white;
+  color: black;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body, button, input, textarea, select, pre {
+  font-size: 14px;
+  font-family: "微软雅黑", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5; }
+
+body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0; }
+
+ul, ol {
+  list-style: none; }
+
+
+img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+/*碧潭飘雪*/
+.btpx{ display:block; width:100%; min-height:100px;}
+.btpx .btpx_foot{display:block; width:100%; height:30%;line-height:30%;/* border-top:1px solid #ebebeb;*/ position:fixed;bottom:0; z-index:99999;}
+/*.btpx .btpx_foot ul{ width:100%; display:block; height:100%; text-align:center}
+.btpx .btpx_foot ul li{ width:25%;height:100%; float:left;padding: 0 4%}
+.btpx .btpx_foot ul li img{ height:100%; width:100%}
+.btpx .btpx_foot ul .zj{width:26%;}*/
+
+
+.main-nav .item .icon,.top-nav .icon,.btm-nav .item .icon, .sub-nav .icon,.swiper-container .btn,.addTipsIcon{background: url("http://market.cmbchina.com/ccard/wap/lywk/images/sprites.png") no-repeat 0 0;}
+.main-nav{width: 100%;height: 182px;position: absolute;left: 0;bottom: 0;z-index: 10;}
+.main-nav .item{width: 33%;height: 182px;display: inline;position: relative;left: 0;float: left;font-size: 14px;text-align: center;-webkit-transform: translate3d(0, 192px, 0);-moz-transform: translate3d(0, 192px, 0);-ms-transform: translate3d(0, 192px, 0);transform: translate3d(0, 192px, 0);}
+.main-nav .item a,.main-nav .item .opacity{width: 100%;display: block;position: absolute;left: 0;top: 0;-webkit-border-top-left-radius: 6px;-webkit-border-top-right-radius: 6px;-moz-border-radius-topleft: 6px;-moz-border-radius-topright: 6px;border-top-left-radius: 6px;border-top-right-radius: 6px;}
+.main-nav .item a{height: 170px;z-index: 12;padding-top: 12px;color: #cdd7da;}
+.main-nav .item h4{height: 20px;line-height: 20px;display: block;color: #bdcbcf;font-size: 14px;font-style: normal;}
+.main-nav .item h3{height: 22px;line-height: 22px;padding-bottom: 12px;color: #fff;font-size: 18px;}
+.main-nav .item li{height: 19px;line-height: 19px;}
+.main-nav .item .opacity{height: 182px;z-index: 11;background: #02323c;opacity: 0.6;filter: alpha(opacity = 60);}
+.main-nav .item .line{width: 100%;height: 4px;position: absolute;left: 0;bottom: 0;z-index: 13;background: #02323c;overflow: hidden;}
+.main-nav .item .icon{width: 32px;height: 32px;display: block;margin: 0 auto 12px;background-size: 500%;}
+.main-nav .item .icon1{background-position: 0 -32px;}
+.main-nav .item .icon2{background-position: 25% -32px;}
+.main-nav .item .icon3{background-position: 50% -32px;}
+.main-nav .item .dotted{margin-right: 2px;}
+.main-nav .item1{-webkit-transition: -webkit-transform 1.2s ease 100ms;-moz-transition: -moz-transform 1.2s ease 100ms;-ms-transition: -ms-transform 1.2s ease 100ms;transition: transform 1.2s ease 100ms;}
+.main-nav .item2{width: 32%;margin: 0 1%;-webkit-transition: -webkit-transform 1.2s ease 300ms;-moz-transition: -moz-transform 1.2s ease 300ms;-ms-transition: -ms-transform 1.2s ease 300ms;transition: transform 1.2s ease 300ms;}
+.main-nav .item3{-webkit-transition: -webkit-transform 1.2s ease 500ms;-moz-transition: -moz-transform 1.2s ease 500ms;-ms-transition: -ms-transform 1.2s ease 500ms;transition: transform 1.2s ease 500ms;}
+

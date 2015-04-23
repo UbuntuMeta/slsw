@@ -1,0 +1,28 @@
+<volist name="left_list" id="item">
+<h3 class="f14"><span class="switchs cu on" title="{$item.title}"></span>{$item.title}</h3>
+<ul>
+	<volist id="nav" name="item['voo']" >
+    	<li id="_MP{$nav.id}" class="sub_menu"><a href="javascript:_MP({$nav.id},'{$nav.url}');" hidefocus="true" style="outline:none;" onclick="show_catpos('{$item.title}&nbsp;>&nbsp;{$nav.title}')">{$nav.title}</a></li>
+	</volist>
+</ul>
+</volist>
+<script type="text/javascript">
+	var topcat = '双流税务局 > ';
+	$("#current_pos").html(topcat);
+	function show_catpos(str){
+		$("#current_pos").html(topcat + str + ' <span id="current_pos_attr"></span>');
+	}
+$(".switchs").each(function(i){
+	var ul = $(this).parent().next();
+	$(this).click(
+	function(){
+		if(ul.is(':visible')){
+			ul.hide();
+			$(this).removeClass('on');
+				}else{
+			ul.show();
+			$(this).addClass('on');
+		}
+	})
+});
+</script>

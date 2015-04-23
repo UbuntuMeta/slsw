@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<link href="__CSS__/table_form.css" rel="stylesheet" type="text/css"/>
+<title>354</title>
+</head>
+<body>
+<div class="pad_10">
+<form action="{:U('update_diy')}" method="post" name="myform" id="myform">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="table_form">
+<tr> 
+      <th>所属菜单:</th>
+      <td><select name="aid" id="aid" class="input-select">
+                  <option value="0" <php>if($vo['aid']=="0") echo "selected";</php>>一级菜单</option>
+                  <volist name="list" id="item">
+                  <option value="{$item.id}" <php>if($vo['aid']==$item['id']) echo "selected";</php>>{$item.title}</option>
+                  </volist>
+                  </select> （非开发人员，谨慎操作此栏目）</td>
+    </tr>
+    <tr> 
+      <th width="80">菜单名称:</th>
+      <td><input type="text" name="title" id="title" class="input-text" value="{$vo.title}" required="required"></td>
+    </tr>
+    <tr>
+      <th>关键字:</th>
+      <td><input type="text" name="wxkey" id="wxkey" class="input-text" value="{$vo.wxkey}" required="required" /> (多个用空格分开,不能重复)</td>
+    </tr>
+	<tr>
+	  <th>菜单描述:</th>
+	  <td>
+	    <textarea name="description" id="description" cols="45" rows="5">{$vo.description}</textarea></td>
+	  </tr>
+	<tr>
+	  <th>调用方法:</th>
+	  <td>
+	    <select name="method" id="method" class="input-select" >
+        <option value="article" <php>if($vo['method']=='article') echo "selected";</php>>普通文章</option>
+        <option value="lbs" <php>if($vo['method']=='lbs') echo "selected";</php>>LBS</option>
+        <option value="product" <php>if($vo['method']=='product') echo "selected";</php>>产品模块</option>
+        <option value="member" <php>if($vo['method']=='member') echo "selected";</php>>会员模块</option>
+        </select></td>
+	  </tr>
+	<tr>
+	  <th>扩展方法:</th>
+	  <td>
+	    <input name="fun" type="text" id="fun" value="{$vo.fun}" class="input-text"/>(此处填写后,要在微信接口写对应的函数哦)</td>
+	  </tr>
+	<tr>
+	  <th>显示顺序:</th>
+	  <td>
+	    <input name="order1" type="text" id="order1" value="{$vo.order1}" class="input-text"/>(越小越靠前)</td>
+	  </tr>
+    <tr> 
+      <th width="80">展示图片:</th>
+      <td><input name="pic" type="text" class="input-text" id="pic" value="{$vo.pic}">
+        <input type="button" name="buttonimg" id="buttonimg" value="预览..." class="button"/>
+        <input name="oldimg" type="hidden" id="oldimg" value="{$vo.pic}" /> (建议大小 210*240)</td>
+    </tr>
+    
+    <tr>
+      <th>是否启用:</th>
+      <td>
+        <input name="is_show" type="radio" id="is_show_0" value="1" <php>if($vo[is_show]) echo "checked";</php> />
+        显示
+        <input type="radio" name="is_show" value="0" id="is_show_1" <php>if(!$vo[is_show]) echo "checked";</php>/>
+        隐藏</td>
+    </tr>
+    <tr>
+      <th>链接地址:</th>
+      <td><input name="url" type="text" id="url" value="{$vo.url}" class="input-text" placeholder="填写后,直接跳转到该链接地址。"/> (前面不要添加 “ <strong>http://</strong> ” 哦)</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td><input type="submit" name="dosubmit" id="dosubmit" class="button" value=" 确 定 ">
+        <input name="id" type="hidden" id="id" value="{$vo.id}" />
+      	<input type="button" name="dosubmit" id="dosubmit" class="button" value=" 返 回 " onclick="javascript:history.back(-1)">
+      </td>
+    </tr>
+    <tr>
+      <th>填写说明：</th>
+      <td><p>1、回复标题和回复内容必填。</p>
+        <p>2、当回复方式选择“纯文字”时，回复内容有效！</p>
+        <p>3、当“第三方接口”填写时，必须选择“图文混排”，否则无效！</p>
+        <p>4、微信一级菜单最多3个栏目4个汉字;二级子菜单最多开启5个,最多7个汉字.多出来的部分将会以“...”代替</p>
+        </td>
+    </tr>
+</table>
+</form>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<link href="__CSS__/table_form.css" rel="stylesheet" type="text/css"/>
+<script src="__STATIC__/kindeditor-4.1.10/kindeditor.js"></script>
+<script>
+var editor;
+KindEditor.ready(function(K) {
+	editor = K.create('textarea[id="connet"]', {
+		allowFileManager : false,
+		pasteType : 1,
+		filterMode:false,
+		resizeType:0,
+		fileManagerJson:"__STATIC__/kindeditor-4.1.10/php/file_manager_json.php?mypath=allimg",
+		urlType:"__STATIC__/UploadImages/allimg",
+		afterBlur: function(){this.sync()},
+		uploadJson : "__STATIC__/kindeditor-4.1.10/php/upload_json.php?mypath=allimg",
+	});
+	K('#buttonimg').click(function() {
+		editor.loadPlugin('image', function() {
+			editor.plugin.imageDialog({
+				imageUrl : K('#picurl').val(),
+				clickFn : function(url, title, width, height, border, align) {
+					K('#picurl').val(url);
+					editor.hideDialog();
+				}
+			});
+		});
+	});
+});
+</script>
+<style>
+.option1{ background:#E2E9EA;}
+</style>
+<title>354</title>
+</head>
+<body>
+<div class="pad_10">
+<form action="__URL__/updatedo/" method="post" name="myform" id="myform">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="table_form">
+
+<tr> 
+      <tr> 
+      <th width="80">业务名称:</th>
+      <td><input name="business_name" value="{$vo.business_name}" type="text" class="input-text" id="title" size="40"></td>
+    </tr>
+	<tr> 
+      <th>所属栏目:</th>
+      <td><select name="business_cls_parent" id="myselect"  class="input-select">
+        <option value="{$vo.business_cls_parent}">{$vo.business_parent_name}</option>
+		
+      <volist name="b_list" id="lvo">
+         <!--  <option value="{$lvo.business_id}">{$lvo.business_name}</option>
+          <volist name="lvo['voo']" id="sub">
+           <option value="{$sub.business_id}">&nbsp;&nbsp;|__{$sub.business_name}</option>
+			 <volist name="lvo['voo']['voo1']" id="sub1">
+			 <option value="{$sub1.business_id}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|__{$sub1.business_name}</option>
+			  </volist>
+          </volist> -->
+		  
+		  <option value="{$lvo.business_id}">{$lvo.business_name}</option>
+          </volist>
+        </select>(默认顶级栏目)</td>
+    </tr>
+    <tr>
+      <th>业务说明:</th>
+      <td><textarea name="business_content" class="input-textarea textareas" id="connet">{$vo.business_content}</textarea>
+      </td>
+    </tr>
+	  <tr> 
+      <th width="80">顺序值(值越小，越排在前面):</th>
+      <td><input name="business_value" type="text" class="input-text" id="title" size="40"value="{$vo.business_value}"></td>
+    </tr>
+    <tr>
+      <th></th>
+      <td><input type="submit" name="dosubmit" id="dosubmit" class="button" value=" 确 定 ">
+        <input name="business_id" type="hidden" id="id" value="{$vo.business_id}" />
+      	<input type="button" name="dosubmit" id="dosubmit" class="button" value=" 返 回 " onclick="javascript:history.back(-1)">
+      </td>
+    </tr>
+</table>
+</form>
+
+</div>
+</body>
+</html>

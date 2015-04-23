@@ -1,0 +1,93 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<title>{$vo.name}</title>
+<meta name="description" content="{$vo.name}">
+<meta name="keywords" content="{$vo.name}">
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="MobileOptimized" content="320">
+<meta name="Iphone-content" content="320">
+<link type="text/css" rel="stylesheet" href="__STYLE__/css/main.css">
+<style>
+.tit{ margin-bottom:2px;}
+.tit h1{ font-size:26px;}
+.tit p{height:18px;}
+.tests{ padding:5px; line-height:17px; font-size:12px; border:1px solid #ffeef2; margin-top:2px;-webkit-border-radius:3px; border-radius:3px;}
+.tests label{ color:#900; font-weight:bold;}
+.txt p img,.txt img{ border:0; max-width:100%}
+</style>
+</head>
+<body>
+<div class="content" >
+  <div class="return"><img src="image/l_06.jpg" /></div>
+  <div class="title_a">茶叶详情</div>
+  <div class="clear"></div>
+  <ul>
+    <li class="sw1"><img src="image/l_08.jpg" /></li>
+    <li class="sw2">竹叶青品味叶形小铁盒（20G）<br /><b>货号:{$vo.bn} 价格:{$vo.price} </b>   </li>
+    <li class="shangp">商品信息</li>
+    <li class="xinx">
+    {$vo.intro}
+    </li>
+    
+  </ul>
+
+</div>
+<div class="tit" style="display:none">
+      <h1>{$vo.name}</h1>
+      <p>货号:{$vo.bn}&nbsp;&nbsp;&nbsp;价格:{$vo.price}
+    </div>
+<div class="txt">
+ {$vo.intro}
+    </div>
+</body>
+</html>
+<script>
+document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+	window.shareData = {
+		"imgUrl": "{:C('HTTP_URL')}{$vo.pic|default='/Public/images/no_logo.png'}",
+		"timeLineLink": "{:C('HTTP_URL')}{:U('Wap/Product/show',array('id'=>$vo['goods_id']))}",
+		"sendFriendLink": "{:C('HTTP_URL')}{:U('Wap/Product/show',array('id'=>$vo['goods_id']))}",
+		"weiboLink": "{:C('HTTP_URL')}{:U('Wap/Product/show',array('id'=>$vo['goods_id']))}",
+		"Title": "{$vo.name|html_entity_decode}",
+		"Content": "{$vo.name|html_entity_decode}",
+	};
+
+	// 发送给好友
+	WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+		WeixinJSBridge.invoke('sendAppMessage', {
+			"img_url": window.shareData.imgUrl,
+			"img_width": "640",
+			"img_height": "640",
+			"link": window.shareData.sendFriendLink,
+			"desc": window.shareData.Content,
+			"title": window.shareData.Title
+		}, function (res) {
+			_report('send_msg', res.err_msg);
+		})
+	});
+
+	// 分享到朋友圈
+	WeixinJSBridge.on('menu:share:timeline', function (argv) {
+		WeixinJSBridge.invoke('shareTimeline', {
+			"img_url": window.shareData.imgUrl,
+			"img_width": "640",
+			"img_height": "640",
+			"link": window.shareData.timeLineLink,
+			"desc": window.shareData.Content,
+			"title": window.shareData.Title
+		}, function (res) {
+			_report('timeline', res.err_msg);
+		});
+	});
+
+	// 分享到微博
+	WeixinJSBridge.on('menu:share:weibo', function (argv) {
+		WeixinJSBridge.invoke('shareWeibo', {
+			"content": window.shareData.Content,
+			"url": window.shareData.weiboLink
+		}, function (res) {
+			_report('weibo', res.err_msg);
+		});
+	});
+}, false)
+</script>

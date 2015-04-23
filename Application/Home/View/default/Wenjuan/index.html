@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>竹叶青-问卷调查</title>
+<script src="__WAP__/jquery-1.10.2.min.js"></script>
+<script src="/Public/static/js/jquery.form.js"></script>
+<script type="text/javascript">
+// wait for the DOM to be loaded
+ $(document).ready(function() {
+        var options = { 
+            url:"{:U('ajaxSend')}", 
+            dataType:'json',
+            success: configDiv,
+        };  
+    //1.ajaxForm间接参数,2.ajaxForm,直接使用参数,3.ajaxSubmit,3种方式实现效果一致
+    //1.$('#myForm').ajaxForm(options);
+    /*2
+    $('#myForm').ajaxForm({
+            url:'comment.php', 
+            dataType:'json',
+            success: configDiv  
+    });*/
+    //3.
+    $('#myForm').submit(function() {    
+         $(this).ajaxSubmit(options);
+         return false;//阻止提交
+    });
+    //4.表单重置
+    $("#reset").click(function(){
+        $("#myForm").resetForm();
+    });
+});
+function configDiv(data){
+	alert(data.content);
+    if(data.status){
+		$("#myForm").resetForm();
+		window.close();
+		window.location=data.url;
+	}else{
+		//$("#myForm").resetForm();
+	}
+}
+</script> 
+<style>
+*{ margin:0 auto; padding:0;}
+body{}
+a{ text-decoration:none}
+.main{ }
+.item{ padding:8px;border-bottom:1px solid #ebebeb; margin-bottom:5px;}
+.item h1{ font-size:110%; font-weight:bold}
+.item p{ line-height:25px;}
+.inputtxt{ border:0px; border-bottom:1px solid #ccc;}
+.pafgs{ display:block; text-align:center; margin:30px 0}
+.pafgs .sa{ color:#FFF; line-height:30px; font-size:140%; border:0;background:#069; width:100%}
+</style>
+</head>
+
+<body>
+<div class="main">
+<form action="{:U('ajaxSend')}" method="post" name="myForm" id="myForm">
+<div class="item">
+<h1>1.请问你购买过竹叶青茶吗？</h1>
+  <p><label><input type="radio" name="t1" value="A" id="t1_0">
+      A. 买过</label>
+  </p>
+  <p><label><input type="radio" name="t1" value="B" id="t1_1">
+  B. 别人送来喝过，没自己买过</label>
+  </p>
+  <p><label><input type="radio" name="t1" value="C" id="t1_2">
+  C. 没买过也没喝过，只是知道</label></p>
+</div>
+<div class="item">
+<h1>2.您每年购买竹叶青的频次是？</h1>
+  <p><label><input type="radio" name="t2" value="A" id="t2_0">
+      A. 是第一次买</label></p>
+  <p><label><input type="radio" name="t2" value="B" id="t2_1">
+  B. 偶尔买过几次</label></p>
+  <p><label><input type="radio" name="t2" value="C" id="t2_2">
+  C. 每两三个月就买一次</label></p>
+  <p><label><input type="radio" name="t2" value="D" id="t2_3">
+  D. 喝完就买，不记得时间</label></p>
+</div>
+<div class="item">
+<h1>3. 您购买竹叶青是自己喝吗？</h1>
+  <p><label><input type="radio" name="t3" value="A" id="t3_0">
+      A. 自己喝</label>
+  </p>
+  <p><label><input type="radio" name="t3" value="B" id="t3_1">
+  B. 送给朋友</label>
+  </p>
+  <p><label><input type="radio" name="t3" value="C" id="t3_2">
+  C. 送给家人</label></p>
+  <p><label><input type="radio" name="t3" value="D" id="t3_3">
+  D. 单位团购</label></p>
+
+</div>
+<div class="item">
+<h1>4. 您最经常会在哪里喝“竹叶青”？</h1>
+  <p><label><input type="radio" name="t4" value="A" id="t4_0">
+      A. 在家里</label>
+  </p>
+  <p><label><input type="radio" name="t4" value="B" id="t4_1">
+  B. 在办公室</label>
+  </p>
+  <p><label><input type="radio" name="t4" value="C" id="t4_2">
+  C. 在茶楼</label></p>
+
+</div>
+<div class="item">
+<h1>5. 您在哪里购买的“竹叶青”？</h1>
+  <p><label><input type="radio" name="t5" value="A" id="t5_0">
+    A. 专卖店</label>
+  </p>
+  <p><label><input type="radio" name="t5" value="B" id="t5_1">
+  B. 网店</label>
+  </p>
+</div>
+<div class="item">
+<h1>6. 您从哪个渠道知晓到竹叶青茶？</h1>
+  <p><label><input type="radio" name="t6" value="A" id="t6_0">
+      A. 广告</label>
+  </p>
+  <p><label><input type="radio" name="t6" value="B" id="t6_1">
+  B. 朋友推荐</label>
+  </p>
+  <p><label><input type="radio" name="t6" value="C" id="t6_2">
+  C. 竹叶青专卖店</label></p>
+  <p><label><input type="radio" name="t6" value="D" id="t6_3">
+  D. 不记得了，一直都知道</label></p>
+
+</div>
+<div class="item">
+<h1>7. 除竹叶青，您还喝其它的绿茶吗？</h1>
+  <p><label><input type="radio" name="t7" value="A" id="t7_0">
+      A. 喝过，有品牌<input name="txt7" class="inputtxt" id="txt7"/></label>
+  </p>
+  <p><label><input type="radio" name="t7" value="B" id="t7_1">
+  B. 喝过，散装茶叶</label>
+  </p>
+
+</div>
+<div class="item">
+<h1>8. 您平时最经常喝的茶叶类别是？</h1>
+  <p><label><input type="radio" name="t8" value="A" id="t8_0">
+     A. 绿茶</label>
+  </p>
+  <p><label><input type="radio" name="t8" value="B" id="t8_1">
+  B. 花茶</label>
+  </p>
+  <p><label><input type="radio" name="t8" value="C" id="t8_2">
+  C. 红茶</label></p>
+  <p><label><input type="radio" name="t8" value="D" id="t8_3">
+  D. 铁观音</label></p>
+  <p><label><input type="radio" name="t8" value="E" id="t8_4">
+  E. 其他<input name="txt8" class="inputtxt" id="txt8"/></label></p>
+
+</div>
+<div class="item">
+<h1>9. 您身边饮用竹叶青的人群大概是怎样的？</h1>
+  <p><label><input type="radio" name="t9" value="A" id="t9_0">
+    A. 中年人群，不限性别</label>
+  </p>
+  <p><label><input type="radio" name="t9" value="B" id="t9_1">
+  B. 中年男性</label>
+  </p>
+  <p><label><input type="radio" name="t9" value="C" id="t9_2">
+  C. 男性人群，不限年龄</label></p>
+  <p><label><input type="radio" name="t9" value="D" id="t9_3">
+  D. 所有喝茶人群，不限男女</label></p>
+
+</div>
+<div class="item">
+<h1>10. 如果用一个词概括你对竹叶青的感受，会是什么？</h1>
+  <p><label><input type="radio" name="t10" value="A" id="t10_0">
+     A. 峨眉高山好茶</label>
+  </p>
+  <p><label><input type="radio" name="t10" value="B" id="t10_1">
+  B. 四川最好的绿茶</label>
+  </p>
+  <p><label><input type="radio" name="t10" value="C" id="t10_2">
+  C. 中国绿茶领导品牌</label></p>
+  <p><label><input type="radio" name="t10" value="D" id="t10_3">
+  D. 平常心</label></p>
+  <p><label><input type="radio" name="t10" value="E" id="t10_4">
+  E. 其他</label></p>
+
+</div>
+<div class="item">
+<h1>11.请问你的性别</h1>
+  <p><label><input type="radio" name="t11" value="A" id="t11_0">
+     A. 男</label>
+  </p>
+  <p><label><input type="radio" name="t11" value="B" id="t11_1">
+  B.女</label>
+  </p>
+</div>
+<div class="item">
+<h1>12. 请问您的年龄</h1>
+  <p><label><input type="radio" name="t12" value="A" id="t12_0">
+      A. 30岁以下</label>
+  </p>
+  <p><label><input type="radio" name="t12" value="B" id="t12_1">
+  B. 30－40岁</label>
+  </p>
+  <p><label><input type="radio" name="t12" value="C" id="t12_2">
+  C. 40岁－50岁</label></p>
+  <p><label><input type="radio" name="t12" value="D" id="t12_3">
+  D. 50岁以上</label></p>
+
+</div>
+<div class="item">
+<h1>13 请问您所在的城市是？</h1>
+  <p><label>
+      您所在城市：<input name="t13" class="inputtxt" id="t13"></label>
+  </p>
+  <input name="wecha_id" type="hidden" id="wecha_id" value="{$wecha_id}"/>
+</div>
+<div class="item" style="border:0">
+<h1>温馨提示:</h1>
+<p>填写完成后，点击"提交"按钮即可</p>
+</div>
+<div class="pafgs"><input name="submit" type="submit" id="submit" value="提交" class="sa"></div>
+</form>
+</div>
+</body>
+</html>

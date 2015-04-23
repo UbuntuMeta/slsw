@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<link href="__CSS__/table_form.css" rel="stylesheet" type="text/css"/>
+<title></title>
+</head>
+<style>
+div a{padding:1px 3px; margin:3px; border:1px solid #d0d0d0; text-decoration:none}
+</style>
+<body>
+<div class="table-list">
+<table>
+	<tr class="header"> 
+    <td class="w40">编号</td>
+    <td class="w200">时间</td>
+	<td class="w80">星期</td>
+      <td class="w40">人数</td>
+      <td class="w40">预约人数</td>
+	  <td class="w40">到来人数</td>
+      <td class="w200">说明</td>
+      <td class="w200">创建时间</td>
+      <td ><a href="{:U('add')}" class="button">添加预约设定</a></td>
+    </tr>
+    <volist name="volist" id="item">
+    <tr> 
+      <td>{$item.so_id}</td>
+      <td>{$item.so_date}</td>
+	  <td>{$item.so_xingqi}</td>
+      <td>{$item.so_peoplenum}</td>
+      <td>{$item.so_orderpeople}</td>
+      <td>{$item.so_peoplecome}</td>
+      <td>{$item.so_descript}</td>
+	  <td>{$item.so_createdate}</td>
+      <td><a href="{:U('addshow',array('id'=>$item['so_id']))}" class="button">编辑</a></td>
+    </tr>
+    </volist>
+    
+	<tr class="header"> 
+    <td colspan="3"><span class="current">共{$count}条</span>{$pager_bar}</td>
+    </tr>
+</table>
+</div>
+</body>
+</html>

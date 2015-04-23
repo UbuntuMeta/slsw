@@ -1,0 +1,45 @@
+@charset "utf-8";
+*{ margin:0 auto; padding:0;}
+html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body {margin: 0; font-size: 13px; line-height: 1.231; background:#e5e5e5;}
+ul li,li{ list-style:none}
+img{ border:0;}
+
+
+
+.main{ display:block;width:92%; margin:2%; padding:2%; background:#0FC; border-radius:5px; -webkit-border-radius:5px; background:#FFF;}
+.no_background{ background:none;}
+.margin-bottom-top{margin-bottom:60px;margin-top:60px;}
+.margin-bottom{margin-bottom:60px;}
+.margin-top{margin-top:60px;}
+
+.header{ display:block; width:100%; height:45px; border-bottom:1px solid #ebebeb; position:fixed;top:0; line-height:45px; z-index:99999; background:#ededed}
+
+/*产品介绍*/
+.tea_main{display:block; width:100%; min-height:100px;}
+.tea_main .tea_item{ width:100%; display:block; padding:7% 0; text-align:center; overflow:hidden}
+.tea_main .tea_item img{ width:55%}
+
+/*碧潭飘雪*/
+.btpx{ display:block; width:100%; min-height:100px;}
+.btpx .btpx_foot{display:block; width:100%; height:30%;line-height:30%;/* border-top:1px solid #ebebeb;*/ position:fixed;bottom:0; z-index:99999;}
+.btpx .btpx_foot ul{ width:100%; display:block; height:100%; text-align:center}
+.btpx .btpx_foot ul li{ width:25%;height:100%; float:left;padding: 0 4%}
+.btpx .btpx_foot ul li img{ height:100%; width:100%}
+.btpx .btpx_foot ul .zj{width:26%;}
+
+
+.footer{ display:block; width:100%; height:45px;/* border-top:1px solid #ebebeb;*/ position:fixed;bottom:0; line-height:45px; z-index:99999; background:#FAFAFA}
+.footer ul li{ width:25%; float:left; height:45px; display:block}
+.footer ul .li1{ background:url(../image/a1.jpg) center no-repeat; background-size: auto 45px;}
+.footer ul .li2{ background:url(../image/a03.jpg) center no-repeat; background-size: auto 45px;}
+.footer ul .li3{ background:url(../image/a04.jpg) center no-repeat; background-size: auto 45px;}
+.footer ul .li4{ background:url(../image/a05.jpg) center no-repeat; background-size: auto 45px;}
+
+.item{ width:100%; background:#0C9; min-height:80px; margin:5px 0;}
+
+
+/*价格查询列表*/
+.product_main{display:block; width:100%; min-height:100px;}
+.product_main .product_list{display:block; width:100%; margin:1% 0;}

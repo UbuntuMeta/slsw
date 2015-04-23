@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>会员中心</title>
+		<link rel="stylesheet" href="__WAP__/moble.min.css" />
+		<link rel="stylesheet" href="__WAP__/jquery.mobile.icons.min.css" />
+		<link rel="stylesheet" href="__WAP__/jquery.mobile.structure-1.4.1.min.css" />
+		<script src="__WAP__/jquery-1.10.2.min.js"></script>
+		<script src="__WAP__/jquery.mobile-1.4.1.min.js"></script>
+	</head>
+
+<body>
+		<div data-role="page">
+			<div data-role="header" data-position="inline">
+				<h1>会员中心</h1>
+			</div>
+			<div data-role="content">
+<ul data-role="listview" data-inset="true" data-icon="false">
+    <li data-role="list-divider">我的信息</li>
+    <li>会员ID：{$item.card_id}</li>
+    <li>卡号：{$item.card_no}</li>
+    <li>电话：{$item.vip_tel}</li>
+</ul>
+{$wxrz}
+<ul data-role="listview" data-inset="true" data-icon="false">
+    <li data-role="list-divider">我的储值</li>
+    <li><a href="#">累计充值<span class="ui-li-count">{$item.save_amt}</span></a></li>
+    <li><a href="#">累计消费<span class="ui-li-count">{$item.consum_amt}</span></a></li>
+    <li><a href="#">消费次数<span class="ui-li-count">{$item.consum_count}</span></a></li>
+
+</ul>
+<ul data-role="listview" data-inset="true" data-icon="false">
+    <li data-role="list-divider">我的积分</li>
+    <li><a href="#">累计积分<span class="ui-li-count">{$item.acc_num}</span></a></li>
+    <li><a href="#">剩余积分<span class="ui-li-count">{$item.now_acc_num}</span></a></li>
+    <li><a href="#">已用积分<span class="ui-li-count">{$item.dec_num}</span></a></li>
+</ul>
+<ul data-role="listview" data-inset="true">
+    <li data-role="list-divider">我的记录</li>
+    <li><a href="{:U('buylist')}">购买记录</a></li>
+    <li><a href="#">积分记录</a></li>
+    <li><a href="#">储值记录</a></li>
+</ul>
+<a href="{:U('Login/loginout',array('wecha_id'=>$_GET['wecha_id']))}" target="_self" class="ui-btn ui-corner-all">安全退出</a>
+			</div>
+            <div data-role="footer" data-position="fixed">
+<div data-role="navbar">
+<ul>
+<li><a href="http://sms.zhuyeqing-tea.com" target="_self">首页</a></li>
+<li><a href="http://ok.jd.com/m/index-11566.htm" target="_self">茶商城</a></li>
+<li><a href="javascript:void(0)"  class="ui-btn-active">会员</a></li>
+<li><a href="#">更多...</a></li>
+</ul>
+</div>
+	</div>
+		</div>
+	</body>
+</html>

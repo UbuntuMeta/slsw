@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<style type="text/css">
+#allmap {width: 100%;height:350px;overflow: hidden;margin:0;}
+</style>
+<link href="__CSS__/table_form.css" rel="stylesheet" type="text/css"/>
+<script src="__STATIC__/kindeditor-4.1.10/kindeditor.js"></script>
+<script src="__STATIC__/js/jquery-1.11.1.min.js"></script>
+
+<script>
+var editor;
+KindEditor.ready(function(K) {
+	editor = K.create('textarea[id="description"]', {
+		allowFileManager : true,
+		pasteType : 1,
+		filterMode:false,
+		resizeType:0,
+		fileManagerJson:"__STATIC__/kindeditor-4.1.10/php/file_manager_json.php?mypath=allimg",
+		urlType:"__STATIC__/UploadImages/allimg",
+		afterBlur: function(){this.sync()},
+		uploadJson : "__STATIC__/kindeditor-4.1.10/php/upload_json.php?mypath=allimg",
+	});
+	K('#buttonimg').click(function() {
+		editor.loadPlugin('image', function() {
+			editor.plugin.imageDialog({
+				imageUrl : K('#picurl').val(),
+				clickFn : function(url, title, width, height, border, align) {
+					K('#picurl').val(url);
+					editor.hideDialog();
+				}
+			});
+		});
+	});
+});
+</script>
+<title>354</title>
+</head>
+<body>
+<div class="pad_10">
+<form action="{:U('insert')}" method="post" name="myform" id="myform">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="table_form">
+<tr> 
+  <th width="80">门店名称:</th>
+  <td><input type="text" name="name" id="name" class="input-text" value="{$vo.name}" required="required"></td>
+</tr>
+<tr>
+  <th>门店类型:</th>
+  <td>
+    <input name="type" type="text" class="input-text" id="type" value="{$vo.type}"/></td>
+</tr>
+<tr>
+  <th>门店电话:</th>
+  <td>
+    <input name="tel" type="text" class="input-text" id="tel" value="{$vo.tel}"/><br/>电话写一个，座机带区号，用户可直接拨打</td>
+</tr>
+    <tr> 
+      <th width="80">展示图片:</th>
+      <td><input name="picurl" type="text" class="input-text" id="picurl" value="{$vo.picurl}" readonly="readonly">
+        <input type="button" name="buttonimg" id="buttonimg" value="预览..." class="button"/><php>if($vo['picurl']!="") {</php><img src='__STATIC__/images/small_img.gif'  border='0' onMouseOver="toolTip('<img src={$vo[picurl]}>')" onMouseOut="toolTip()"/> <php>}</php></td>
+    </tr>
+    
+    <tr>
+      <th>门店地址:</th>
+      <td><input name="address" type="text" class="input-text" id="address" value="{$vo.address}" />
+        </td>
+    </tr>
+    <tr>
+      <th>定位地址:</th>
+      <td><input name="address2" type="text" class="input-text" id="address2" value="{$vo.address}" /><input type="button" name="button" id="button" value="地图上地位" class="button"  onclick="chee();"/><br/>(在地图上单击即可定位,此地址为定位地址，如果不能定位，请把地址从后向前依次上传，县级及以下定位不是很精确或定位不到位)</td>
+    </tr>
+    <tr>
+      <th>门店坐标:</th>
+      <td>
+        经度:<input name="lng" type="text" id="lng" value="{$vo.lng}" class="input-text" style="width:120px;"/>
+      维度:<input name="lat" type="text" id="lat" value="{$vo.lat}"  class="input-text" style="width:120px;"/></td>
+    </tr>
+    <tr>
+      <th colspan="2"><div id="allmap"></div></th>
+      </tr>
+    <tr>
+      <th>门店介绍:</th>
+      <td><textarea name="description" class="input-textarea textareas" id="description">{$vo.description}</textarea>
+        
+        </td>
+    </tr>
+    <tr>
+      <th></th>
+      <td><input type="submit" name="dosubmit" id="dosubmit" class="button" value=" 确 定 ">
+        <input name="id" type="hidden" id="id" value="{$vo.id}" />
+        <input type="button" name="dosubmit" id="dosubmit" class="button" value=" 返 回 " onclick="javascript:history.back(-1)">
+        </td>
+    </tr>
+</table>
+</form>
+
+</div>
+</body>
+</html>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=I6pMv4th3EQGRmcEBEc8EGmD"></script>
+<script type="text/javascript">
+var map = new BMap.Map("allmap");// 创建Map实例
+map.enableScrollWheelZoom();
+map.enableDragging();   
+map.addControl(new BMap.NavigationControl());
+map.addControl(new BMap.ScaleControl());  
+
+var point = new BMap.Point("{$vo.latlng|default='104.068272'}","{$vo.lat|default='30.7138'}");
+map.centerAndZoom(point,<php>if($vo['lng'] && $vo['lat']) echo '15';else echo '5';</php>);
+marker1 = new BMap.Marker(point);        // 创建标注
+map.addOverlay(marker1);
+/*
+map.addEventListener("dragging", function(e){
+	marker1.setPosition(new BMap.Point(e.point.lng,e.point.lat));
+	map.panTo(new BMap.Point(e.point.lng,e.point.lat));
+	$("#lng").val(e.point.lng);
+	$("#lat").val(e.point.lat);
+
+});
+*/
+map.addEventListener("click",function(e){
+    marker1.setPosition(new BMap.Point(e.point.lng,e.point.lat));
+	map.panTo(new BMap.Point(e.point.lng,e.point.lat));
+	$("#lng").val(e.point.lng);
+	$("#lat").val(e.point.lat);
+});
+
+function chee(){
+	//var provinceid=$("#provinceid").find("option:selected").text();
+	//var su_cityid=$("#su_cityid").find("option:selected").text();
+	//var su_qyid=$("#su_qyid").find("option:selected").text();
+	var address=$("#address").val();
+    map.centerAndZoom(address,12);
+	var local = new BMap.LocalSearch(map, {
+		renderOptions:{map: map}
+	});
+	local.search(address);
+}
+</script>
+<script src="__STATIC__/js/ToolTip.js"></script>

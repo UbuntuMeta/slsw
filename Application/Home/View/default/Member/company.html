@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no" name="viewport">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<title>企业信息</title>
+<link type="text/css" rel="stylesheet" href="__STYLE__/css/css2.css">
+<script src="__WAP__/jquery-1.10.2.min.js"></script>
+<script src="/Public/static/laycode/layer.min.js" type="text/javascript"></script>
+
+</head>
+<body>
+
+<div class="top" >
+  <img src="__STYLE__/image/0_04.jpg" class="logo"><b>信息中心</b>
+</div>
+<div class="clear"></div>
+
+<div class="box">
+  <div class="enterprise">
+    <div class="ent_title"><img src="__STYLE__/image/7_03.jpg" ><b>企业信息</b></div>    
+    <div class="clear"></div>
+	
+    <ul class="informat">
+	<li>欢迎您, {$company.company_username}</li>
+      <li><p>企业名：</p>{$company.company_name}</li>
+	  <li><p>手机号：</p>{$company.company_phone}</li>
+      <li><p>税务登记证号：</p>{$company.company_tax}</li>
+      <li><p>所属税务所 ：</p>{$company.tax_class}</li>
+      <li><p>所属企业：</p>{$company.company_class}</li>
+    </ul>
+    
+  </div>
+  <div class="jg">
+  <a href="__URL__/updatecompany"><button  type="button"  class="jbang" id="submit-">修改信息</button> </a>
+ <a href="{:U('Login/loginoutshow')}"> <button type="button" class="jbang_b" name="bangding" >注销</button></a>
+  </div>
+  <div class="jg">
+  <a href="{$pcurl}"><button type="button"  class="jbang">预约</button> </a>
+  <a href="__URL__/orderlist?class_id=2"><button type="button"  class="jbang_b">查看预约</button> </a>
+
+  </div>
+  <div class="jg">
+ <button type="button" id="submit1" class="jbang">退出</button>
+
+  
+  </div>
+</div>
+
+
+
+
+
+</body>
+</html>
+<script type="text/javascript">
+ $("#submit1").on("click",function(){
+	$.post("{:U('Login/loginout1')}",function(data){
+		if(data.status==1){
+			layer.msg("退出成功", 2, 1);
+			setTimeout(function (){window.location=data.url;},1000);
+		}else{
+			layer.msg(data.content, 2, 3);
+			setTimeout(function (){$("#submit-").val("修改");},1000);
+		}
+   },'json');
+   }
+   );
+
+</script>
+
+
+

@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script charset="utf-8" src="__JQ__/jquery.js"></script>
+<title>在此处插入标题</title>
+
+</head>
+<body>
+	<style type="text/css">
+table.gridtable {
+	font-family: verdana, arial, sans-serif;
+	font-size: 14px;
+	color: #333333;
+	border-width: 1px;
+	border-color: #ECECEC;
+	border-collapse: collapse;
+}
+
+table.gridtable th {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #F7FBFC;
+}
+
+table.gridtable td {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #ffffff;
+}
+
+.td {
+	width: 200px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	border: 1px solid #ECECEC;
+}
+</style>
+
+	<INPUT type="text" name="link" id="text">
+	<INPUT type="button" id="btn1" value="关键字查询">
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="button" id="btn2" value="查看未回复留言">
+	<form action="{:U('Sys/Message/delete')}" method="post">
+	<table width="1400px" height="400px" class="gridtable">
+		<tr>
+			<th scope="col">序号</th>
+			<th scope="col">留言内容</th>
+			<th scope="col">手机号码</th>
+			<th scope="col">创建时间</th>
+			<th scope="col">回复时间</th>
+			<th scope="col">是否回复</th>
+			<th>		
+						<input type="checkbox"  value="全选" onClick="selectBox('all')">全选
+						<input type="checkbox"  value="反选" onClick="selectBox('reverse')">反选
+						<input type="submit" value="确定">
+			</th>
+		</tr>
+		<volist name="result" id="vo">
+		<tr>
+			<td>{$vo.msg_id}</td>
+			<td>
+				<a href="{:U('Sys/Message/reply')}?id={$vo.msg_id}"
+					title="{$vo.msg_descript}">{$vo.msg_descript|substr=0,60}</a>
+			</td>
+			<td>{$vo.msg_phone}</td>
+			<td>{$vo.msg_startdate}</td>
+			<td>{$vo.msg_date}</td>
+			<td>
+				<a
+					href="{:U('Sys/Message/isshow')}?id={$vo.msg_id}&isshow={$vo.msg_isshow}&now={$now}"></a>
+				<img src="__SYSIMG__/flag_{$vo.msg_flag}.png"
+					style="width: 30px; height: 30px;" border=0 />
+
+			</td>
+			<td>
+				<input type="checkbox" name="id[]" value="{$vo.msg_id}" id="input"></input>
+				<a href="{:U('Sys/Message/delete')}?id={$vo.msg_id}"
+					onclick="return confirm('确实要删除该内容吗?')">[删除]</a>
+				<a href="{:U('Sys/Message/reply')}?id={$vo.msg_id}">[回复]</a>
+			</td>
+		</tr>
+		</volist>
+		<tr>
+			<td colspan="8">共{$count}条{$pager_bar}</td>
+		</tr>
+	</table>
+	</form>
+
+</body>
+<script>
+	$(document).ready(function() {
+		$("#btn1").bind("click", function() {
+			var text = $("#text").val();
+			window.location = "{:U('Sys/Message/like')}?text=" + text;
+		});
+		$("#btn2").bind("click", function() {
+			window.location = "{:U('Sys/Message/noreply')}";
+		});  
+
+	});
+</script>
+<script>
+		function selectBox(selectType){  
+		    var checkboxis = document.getElementsByName("id[]");   //获取所有name为id[] 的值。
+		    if(selectType == "reverse"){  
+		        for (var i=0; i<checkboxis.length; i++){  
+		          //  alert(checkboxis[i].checked);          //循环修改checkbox的值
+		            checkboxis[i].checked = !checkboxis[i].checked;  
+		        }  
+		    }  
+		    else if(selectType == "all")  
+		    {  
+		        for (var i=0; i<checkboxis.length; i++){  
+		            //alert(checkboxis[i].checked);  
+		            checkboxis[i].checked = true;  
+		        }  
+		    }  
+		 }
+		</script>
+</html>

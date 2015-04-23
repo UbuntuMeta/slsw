@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<link href="__CSS__/table_form.css" rel="stylesheet" type="text/css"/>
+<title>354</title>
+</head>
+<style>
+div a{padding:1px 3px; margin:3px; border:1px solid #d0d0d0; text-decoration:none}
+</style>
+<body>
+<div class="table-list">
+<table>
+	<tr class="header"> 
+    <td>编号</td>
+    <td>门店名称</td>
+      <td>门店类别</td>
+      <td>门店电话</td>
+      <td>门店地址</td>
+      <td class="center"><a href="{:U('add')}">添加</a></td>
+    </tr>
+    <volist name="list" id="item">
+    <tr> 
+      <td>{$item.id}</td>
+      <td>{$item.name}<php>if($item['picurl']!="") {</php><img src='__STATIC__/images/small_img.gif'  border='0' onMouseOver="toolTip('<img src={$item[picurl]}>')" onMouseOut="toolTip()"/> <php>}</php></td>
+      <td>{$item.type}</td>
+      <td>{$item.tel}</td>
+      <td>{$item.address}</td>
+      <td><a href="{:U('add',array('id'=>$item['id']))}" class="button">编辑</a></td>
+    </tr>
+    </volist>
+    
+	<tr class="header"> 
+    <td colspan="6">{$page}</td>
+    </tr>
+</table>
+</div>
+</body>
+</html>
+<script src="__STATIC__/js/ToolTip.js"></script>

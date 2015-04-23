@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no" name="viewport">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<title>产品介绍</title>
+<link type="text/css" rel="stylesheet" href="__STYLE__/css/css.css">
+<link href="js/jquery-1.11.1.min.js">
+<script language="javascript">
+function Getsize(){
+//	var wap_width=document.body.clientWidth;//screen.width;;
+	var wap_height=document.body.clientWidth;//screen.height;
+	var myDiv =document.getElementById("page_five");
+//	//myDiv.style.width = wap_width + 'px';
+	myDiv.style.height = wap_height + 'px';
+	//alert(wap_height);
+}
+</script>
+<style>
+.page_five{ background:url(__STYLE__/image/e3.jpg) center top no-repeat; background-size:100% 100%;}
+</style>
+<style>
+.five_list{ background:url(__STYLE__/image/e2.png) center no-repeat; background-size:100% 100%;}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body onLoad="Getsize()">
+<div class="page_five" id="page_five">
+  <div class="five_list">
+    <ul>
+         <div class="title"><br/>价格 </div>
+         <li> <a href="{:U('index',array('typeid'=>'100'))}">0-200元</a>  </li>
+         <li><a href="{:U('index',array('typeid'=>'101'))}"> 201-500元</a> </li>
+         <li><a href="{:U('index',array('typeid'=>'102'))}">  501-1000元 </a> </li>
+         <li><a href="{:U('index',array('typeid'=>'103'))}">  1001-1500元 </a> </li>
+         <li><a href="{:U('index',array('typeid'=>'104'))}">  1500元以上 </a> </li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

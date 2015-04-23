@@ -1,0 +1,17 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>修改</title>
+</head>
+<body>
+	<form action="{:U('Sys/Reply/updata')}?id={$id}" method="post">
+		留言内容：<br>
+		<textarea cols="33" name="reply" style="width: 600px;height: 150px;">{$result[0][msg_descript]}</textarea>
+		<br><br>回复内容：<br>
+		<textarea cols="33" name="reply" style="width: 600px;height: 150px;">{$result[0][reply_descript]}</textarea>
+		<br>
+		<input id="submit" type="submit" name="submit" value="提交" />
+	</form>
+</body>
+</html>

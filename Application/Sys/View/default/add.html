@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<link href="__CSS__/table_form.css" rel="stylesheet" type="text/css"/>
+<script src="__STATIC__/kindeditor-4.1.10/kindeditor.js"></script>
+<script>
+var editor;
+KindEditor.ready(function(K) {
+	editor = K.create('textarea[id="connet"]', {
+		allowFileManager : false,
+		pasteType : 1,
+		filterMode:false,
+		resizeType:0,
+		fileManagerJson:"__STATIC__/kindeditor-4.1.10/php/file_manager_json.php?mypath=allimg",
+		urlType:"__STATIC__/UploadImages/allimg",
+		afterBlur: function(){this.sync()},
+		uploadJson : "__STATIC__/kindeditor-4.1.10/php/upload_json.php?mypath=allimg",
+	});
+	K('#buttonimg').click(function() {
+		editor.loadPlugin('image', function() {
+			editor.plugin.imageDialog({
+				imageUrl : K('#picurl').val(),
+				clickFn : function(url, title, width, height, border, align) {
+					K('#picurl').val(url);
+					editor.hideDialog();
+				}
+			});
+		});
+	});
+});
+</script>
+<style>
+.option1{ background:#E2E9EA;}
+</style>
+<title>354</title>
+</head>
+<body>
+<div class="pad_10">
+<form action="__URL__/insert/" method="post" name="myform" id="myform">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="table_form">
+
+
+	
+ 
+    
+   
+    <tr>
+      <th>群发内容</th>
+      <td><textarea name="content" class="input-textarea textareas" id="connet"></textarea>
+      	
+      </td>
+    </tr>
+     <tr>
+      <th>群发对象</th>
+      <td>
+		
+	  </td>
+    </tr>
+	  <tr>
+      <th>税务所：</th>
+      <td>
+	  <input type="checkbox" name="tax[]" value="102">第二税务所&nbsp;&nbsp;&nbsp;
+	  <input type="checkbox" name="tax[]" value="103">第三税务所&nbsp;&nbsp;&nbsp;
+	  <input type="checkbox" name="tax[]" value="104">第四税务所&nbsp;&nbsp;&nbsp;
+	  <input type="checkbox" name="tax[]" value="105">第五税务所&nbsp;&nbsp;&nbsp;
+	  <input type="checkbox" name="tax[]" value="106">第六税务所&nbsp;&nbsp;&nbsp;
+	  <input type="checkbox" name="tax[]" value="107">第七税务所&nbsp;&nbsp;&nbsp;
+	  <input type="checkbox" name="tax[]" value="108">第八税务所&nbsp;&nbsp;&nbsp;
+	  <input type="checkbox" name="tax[]" value="109">第九税务所&nbsp;&nbsp;&nbsp;
+	  <input type="checkbox" name="tax[]" value="110">第十二税务所&nbsp;&nbsp;&nbsp;
+	  <input type="checkbox" name="tax[]" value="111">不知道所属税务所&nbsp;&nbsp;&nbsp;
+	  </td>
+    </tr>
+	<tr>
+      <th>对象：</th>
+      <td>
+	   <select name="peopleclass" >
+	    <option value="0">选择发送对象</option>
+		<option value="1">企业</option>
+		<option value="2">个人</option>
+		</select>
+	  </td>
+    </tr>
+	<tr>
+      <th>公司类型：</th>
+      <td>
+	 <select name="companyclass" class="ent_2"  id="company_class">
+	 <option value="0">选择公司类型</option>
+	  <option value="3">小型微利企业</option>
+		<option value="4">非小型微利企业</option>
+		</select> 
+	  </td>
+    </tr>
+    <tr>
+      <th></th>
+      <td><input type="submit" name="dosubmit" id="dosubmit" class="button" value=" 确 定 ">
+       
+      	<input type="button" name="dosubmit" id="dosubmit" class="button" value=" 返 回 " onclick="javascript:history.back(-1)">
+      </td>
+    </tr>
+	
+	
+</table>
+</form>
+
+</div>
+</body>
+</html>

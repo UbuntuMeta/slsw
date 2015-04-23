@@ -1,0 +1,1089 @@
+[ 2015-04-23T10:14:46+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Member&a=user&token=sldsj757&wecha_id=otjA6tzn83MqjCg_InMRrt6qjOro
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000375s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001420s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001535s ]
+NOTIC: [8] Undefined index: wecha_id /home/freephp/www/dswx/Application/Home/Controller/UserWxController.class.php 第 11 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.001694s ]
+SQL: SELECT * FROM `t_user` WHERE ( `wecha_id` = 'otjA6tzn83MqjCg_InMRrt6qjOro' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000566s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000103s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000229s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.061500s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.061704s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.011020s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011213s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004843s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005049s ]
+
+[ 2015-04-23T10:15:00+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=login1&msg=%E4%BD%A0%E5%B7%B2%E7%BB%8F%E6%B3%A8%E5%86%8C%E4%BA%86%EF%BC%8C%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E7%99%BB%E5%BD%95
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000292s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000153s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000339s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.000975s ]
+SQL: SELECT `wecha_id`,`user_id`,`user_phone`,`user_username`,`user_sfz`,`tax_class` FROM `t_user` WHERE ( `wecha_id` = 'otjA6tzn83MqjCg_InMRrt6qjOro' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000267s ]
+SQL: SHOW COLUMNS FROM `t_company` [ RunTime:0.000760s ]
+SQL: SELECT `company_name`,`company_phone`,`company_pass`,`company_tax`,`company_class`,`tax_class`,`wecha_id`,`company_username`,`company_date`,`status`,`company_email` FROM `t_company` WHERE ( `wecha_id` = 'otjA6tzn83MqjCg_InMRrt6qjOro' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000329s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000153s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000353s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005818s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005959s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000102s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000217s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000092s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000210s ]
+
+[ 2015-04-23T10:15:05+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=first?new_reg=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000211s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000105s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000239s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.000776s ]
+SQL: SELECT `wecha_id`,`user_id`,`user_phone`,`user_username`,`user_sfz`,`tax_class` FROM `t_user` WHERE ( `wecha_id` = 'otjA6tzn83MqjCg_InMRrt6qjOro' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000106s ]
+SQL: SHOW COLUMNS FROM `t_company` [ RunTime:0.000661s ]
+SQL: SELECT `company_name`,`company_phone`,`company_pass`,`company_tax`,`company_class`,`tax_class`,`wecha_id`,`company_username`,`company_date`,`status`,`company_email` FROM `t_company` WHERE ( `wecha_id` = 'otjA6tzn83MqjCg_InMRrt6qjOro' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000075s ]
+ERR: 非法操作:first?new_reg=1
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /home/freephp/www/dswx/ThinkPHP/Common/functions.php:61) /home/freephp/www/dswx/ThinkPHP/Library/Think/Think.class.php 第 226 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /home/freephp/www/dswx/ThinkPHP/Common/functions.php:61) /home/freephp/www/dswx/ThinkPHP/Library/Think/Think.class.php 第 227 行.
+
+[ 2015-04-23T10:15:59+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=login1&msg=%E4%BD%A0%E5%B7%B2%E7%BB%8F%E6%B3%A8%E5%86%8C%E4%BA%86%EF%BC%8C%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E7%99%BB%E5%BD%95
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000141s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000301s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.001060s ]
+SQL: SELECT `wecha_id`,`user_id`,`user_phone`,`user_username`,`user_sfz`,`tax_class` FROM `t_user` WHERE ( `wecha_id` = 'otjA6tzn83MqjCg_InMRrt6qjOro' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000142s ]
+SQL: SHOW COLUMNS FROM `t_company` [ RunTime:0.001009s ]
+SQL: SELECT `company_name`,`company_phone`,`company_pass`,`company_tax`,`company_class`,`tax_class`,`wecha_id`,`company_username`,`company_date`,`status`,`company_email` FROM `t_company` WHERE ( `wecha_id` = 'otjA6tzn83MqjCg_InMRrt6qjOro' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000127s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000137s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000292s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006333s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006514s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001110s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001286s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000122s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000241s ]
+
+[ 2015-04-23T10:15:59+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=login1&msg=%E4%BD%A0%E5%B7%B2%E7%BB%8F%E6%B3%A8%E5%86%8C%E4%BA%86%EF%BC%8C%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E7%99%BB%E5%BD%95
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000186s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000096s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000242s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.000942s ]
+SQL: SELECT `wecha_id`,`user_id`,`user_phone`,`user_username`,`user_sfz`,`tax_class` FROM `t_user` WHERE ( `wecha_id` = 'otjA6tzn83MqjCg_InMRrt6qjOro' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000117s ]
+SQL: SHOW COLUMNS FROM `t_company` [ RunTime:0.001027s ]
+SQL: SELECT `company_name`,`company_phone`,`company_pass`,`company_tax`,`company_class`,`tax_class`,`wecha_id`,`company_username`,`company_date`,`status`,`company_email` FROM `t_company` WHERE ( `wecha_id` = 'otjA6tzn83MqjCg_InMRrt6qjOro' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000134s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000152s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000318s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006649s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006791s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000108s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000084s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000208s ]
+
+[ 2015-04-23T10:16:05+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=first&new_reg=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000198s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000111s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000250s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.000903s ]
+SQL: SELECT `wecha_id`,`user_id`,`user_phone`,`user_username`,`user_sfz`,`tax_class` FROM `t_user` WHERE ( `wecha_id` = 'otjA6tzn83MqjCg_InMRrt6qjOro' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000097s ]
+SQL: SHOW COLUMNS FROM `t_company` [ RunTime:0.000870s ]
+SQL: SELECT `company_name`,`company_phone`,`company_pass`,`company_tax`,`company_class`,`tax_class`,`wecha_id`,`company_username`,`company_date`,`status`,`company_email` FROM `t_company` WHERE ( `wecha_id` = 'otjA6tzn83MqjCg_InMRrt6qjOro' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000138s ]
+NOTIC: [8] Undefined index: user_id /home/freephp/www/dswx/Application/Home/Controller/LoginController.class.php 第 104 行.
+NOTIC: [8] Undefined index: wecha_id /home/freephp/www/dswx/Application/Home/Controller/LoginController.class.php 第 109 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000307s ]
+NOTIC: [2] file_put_contents(./Application/Runtime/Cache/Home/dc73d6bc8c2b53e9e0638dd8b623f508.php): failed to open stream: Permission denied /home/freephp/www/dswx/ThinkPHP/Library/Think/Storage/Driver/File.class.php 第 46 行.
+ERR: _STORAGE_WRITE_ERROR_:./Application/Runtime/Cache/Home/dc73d6bc8c2b53e9e0638dd8b623f508.php
+
+[ 2015-04-23T10:16:24+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=first&new_reg=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000195s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000088s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000212s ]
+NOTIC: [8] Undefined index: user_id /home/freephp/www/dswx/Application/Home/Controller/LoginController.class.php 第 104 行.
+NOTIC: [8] Undefined index: wecha_id /home/freephp/www/dswx/Application/Home/Controller/LoginController.class.php 第 109 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000216s ]
+NOTIC: [2] file_put_contents(./Application/Runtime/Cache/Home/dc73d6bc8c2b53e9e0638dd8b623f508.php): failed to open stream: Permission denied /home/freephp/www/dswx/ThinkPHP/Library/Think/Storage/Driver/File.class.php 第 46 行.
+ERR: _STORAGE_WRITE_ERROR_:./Application/Runtime/Cache/Home/dc73d6bc8c2b53e9e0638dd8b623f508.php
+
+[ 2015-04-23T10:16:25+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=first&new_reg=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000204s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000121s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000280s ]
+NOTIC: [8] Undefined index: user_id /home/freephp/www/dswx/Application/Home/Controller/LoginController.class.php 第 104 行.
+NOTIC: [8] Undefined index: wecha_id /home/freephp/www/dswx/Application/Home/Controller/LoginController.class.php 第 109 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000115s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000282s ]
+NOTIC: [2] file_put_contents(./Application/Runtime/Cache/Home/dc73d6bc8c2b53e9e0638dd8b623f508.php): failed to open stream: Permission denied /home/freephp/www/dswx/ThinkPHP/Library/Think/Storage/Driver/File.class.php 第 46 行.
+ERR: _STORAGE_WRITE_ERROR_:./Application/Runtime/Cache/Home/dc73d6bc8c2b53e9e0638dd8b623f508.php
+
+[ 2015-04-23T10:17:18+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=first&new_reg=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000092s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000114s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000259s ]
+NOTIC: [8] Undefined index: user_id /home/freephp/www/dswx/Application/Home/Controller/LoginController.class.php 第 104 行.
+NOTIC: [8] Undefined index: wecha_id /home/freephp/www/dswx/Application/Home/Controller/LoginController.class.php 第 109 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000203s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003708s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003832s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000078s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000176s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000076s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000177s ]
+
+[ 2015-04-23T10:19:52+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=first&new_reg=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000196s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000105s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000239s ]
+NOTIC: [8] Undefined index: user_id /home/freephp/www/dswx/Application/Home/Controller/LoginController.class.php 第 105 行.
+
+[ 2015-04-23T10:20:07+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=first&new_reg=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000226s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000086s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000201s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.000835s ]
+SQL: SELECT `wecha_id`,`user_id`,`user_phone`,`user_username`,`user_sfz`,`tax_class` FROM `t_user` WHERE ( `wecha_id` = 'otjA7ip_3hAqRHnk7eKztgBNU09L' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000282s ]
+SQL: SHOW COLUMNS FROM `t_company` [ RunTime:0.000697s ]
+SQL: SELECT `company_name`,`company_phone`,`company_pass`,`company_tax`,`company_class`,`tax_class`,`wecha_id`,`company_username`,`company_date`,`status`,`company_email` FROM `t_company` WHERE ( `wecha_id` = 'otjA7ip_3hAqRHnk7eKztgBNU09L' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000234s ]
+NOTIC: [8] Undefined index: user_id /home/freephp/www/dswx/Application/Home/Controller/LoginController.class.php 第 105 行.
+
+[ 2015-04-23T10:20:51+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=first&new_reg=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000114s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000132s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000323s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.001009s ]
+SQL: SELECT `wecha_id`,`user_id`,`user_phone`,`user_username`,`user_sfz`,`tax_class` FROM `t_user` WHERE ( `wecha_id` = 'otjA7S1QRqWUgv3kzMG69JjEaYic' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000309s ]
+SQL: SHOW COLUMNS FROM `t_company` [ RunTime:0.000761s ]
+SQL: SELECT `company_name`,`company_phone`,`company_pass`,`company_tax`,`company_class`,`tax_class`,`wecha_id`,`company_username`,`company_date`,`status`,`company_email` FROM `t_company` WHERE ( `wecha_id` = 'otjA7S1QRqWUgv3kzMG69JjEaYic' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000245s ]
+NOTIC: [8] Undefined index: user_id /home/freephp/www/dswx/Application/Home/Controller/LoginController.class.php 第 105 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000186s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004049s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004192s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000072s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000162s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000068s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000160s ]
+
+[ 2015-04-23T10:20:57+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=usershow
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000116s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000101s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000238s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.000962s ]
+SQL: SELECT `wecha_id`,`user_id`,`user_phone`,`user_username`,`user_sfz`,`tax_class` FROM `t_user` WHERE ( `wecha_id` = 'otjA79PVxkpEaU4fSM1qFcRjAnK_' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000277s ]
+SQL: SHOW COLUMNS FROM `t_company` [ RunTime:0.000729s ]
+SQL: SELECT `company_name`,`company_phone`,`company_pass`,`company_tax`,`company_class`,`tax_class`,`wecha_id`,`company_username`,`company_date`,`status`,`company_email` FROM `t_company` WHERE ( `wecha_id` = 'otjA79PVxkpEaU4fSM1qFcRjAnK_' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000304s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000107s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000215s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019634s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019736s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000063s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000177s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000061s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000136s ]
+
+[ 2015-04-23T10:21:55+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000280s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000127s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000323s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.001226s ]
+SQL: SELECT `wecha_id`,`user_id`,`user_phone`,`user_username`,`user_sfz`,`tax_class` FROM `t_user` WHERE ( `wecha_id` = 'otjA79PVxkpEaU4fSM1qFcRjAnK_' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000124s ]
+SQL: SHOW COLUMNS FROM `t_company` [ RunTime:0.001090s ]
+SQL: SELECT `company_name`,`company_phone`,`company_pass`,`company_tax`,`company_class`,`tax_class`,`wecha_id`,`company_username`,`company_date`,`status`,`company_email` FROM `t_company` WHERE ( `wecha_id` = 'otjA79PVxkpEaU4fSM1qFcRjAnK_' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000195s ]
+NOTIC: [8] Undefined index: taxclass /home/freephp/www/dswx/Application/Home/Controller/LoginController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.001074s ]
+SQL: SHOW COLUMNS FROM `t_company` [ RunTime:0.000999s ]
+SQL: SELECT * FROM `t_user` WHERE ( `user_username` = 'sweetnow' ) AND ( `status` IN ('1','2') ) LIMIT 1   [ RunTime:0.044256s ]
+NOTIC: [8] Undefined variable: phone /home/freephp/www/dswx/Application/Home/Controller/LoginController.class.php 第 585 行.
+SQL: SELECT * FROM `t_company` WHERE ( `company_username` = null ) AND ( `status` IN ('1','2') ) LIMIT 1   [ RunTime:0.000369s ]
+SQL: SELECT * FROM `t_user` WHERE ( `status` IN ('1','2') ) AND ( `wecha_id` = 'otjA79PVxkpEaU4fSM1qFcRjAnK_' ) LIMIT 1   [ RunTime:0.000710s ]
+SQL: SELECT * FROM `t_company` WHERE ( `status` IN ('1','2') ) AND ( `wecha_id` = 'otjA79PVxkpEaU4fSM1qFcRjAnK_' ) LIMIT 1   [ RunTime:0.000269s ]
+SQL: INSERT INTO `t_user` (`user_username`,`user_name`,`user_phone`,`user_pass`,`user_sfz`,`tax_class`,`user_date`,`wecha_id`,`status`,`user_email`) VALUES ('sweetnow','sw','18784991774','c7a5e8550d05683dba836bd27779a33e','510108198812121234',null,'2015-04-23 10:21:55','otjA79PVxkpEaU4fSM1qFcRjAnK_',1,'401112769@qq.com') [ RunTime:0.038174s ]
+NOTIC: [8] Undefined index: access_token /home/freephp/www/dswx/Application/Home/Controller/LoginController.class.php 第 654 行.
+NOTIC: [8] Undefined variable: token /home/freephp/www/dswx/Application/Home/Controller/LoginController.class.php 第 68 行.
+
+[ 2015-04-23T10:21:56+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Member&a=user&wecha_id=otjA79PVxkpEaU4fSM1qFcRjAnK_
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000202s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000091s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000225s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.000914s ]
+SQL: SELECT `wecha_id`,`user_id`,`user_phone`,`user_username`,`user_sfz`,`tax_class` FROM `t_user` WHERE ( `wecha_id` = 'otjA79PVxkpEaU4fSM1qFcRjAnK_' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000307s ]
+SQL: SELECT * FROM `t_user` WHERE ( `wecha_id` = 'otjA79PVxkpEaU4fSM1qFcRjAnK_' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000346s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000164s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000317s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005661s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005803s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000093s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000212s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000146s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000299s ]
+
+[ 2015-04-23T10:21:59+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=loginout1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000057s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000126s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.000709s ]
+SQL: SELECT `wecha_id`,`user_id`,`user_phone`,`user_username`,`user_sfz`,`tax_class` FROM `t_user` WHERE ( `wecha_id` = 'otjA79PVxkpEaU4fSM1qFcRjAnK_' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000143s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.001076s ]
+SQL: SHOW COLUMNS FROM `t_company` [ RunTime:0.001115s ]
+SQL: SELECT * FROM `t_user` WHERE ( `wecha_id` = 'otjA79PVxkpEaU4fSM1qFcRjAnK_' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000134s ]
+SQL: UPDATE `t_user` SET `status`=2 WHERE ( `wecha_id` = 'otjA79PVxkpEaU4fSM1qFcRjAnK_' ) AND ( `status` = 1 ) [ RunTime:0.044600s ]
+
+[ 2015-04-23T10:22:00+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000119s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000306s ]
+NOTIC: [8] Undefined index: wecha_id /home/freephp/www/dswx/Application/Home/Controller/UserWxController.class.php 第 11 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000198s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000404s ]
+
+[ 2015-04-23T10:22:11+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000219s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000104s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000240s ]
+NOTIC: [8] Undefined index: wecha_id /home/freephp/www/dswx/Application/Home/Controller/UserWxController.class.php 第 11 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000130s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000264s ]
+
+[ 2015-04-23T10:22:51+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000181s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000250s ]
+NOTIC: [8] Undefined index: wecha_id /home/freephp/www/dswx/Application/Home/Controller/UserWxController.class.php 第 11 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000150s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000316s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005175s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005335s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000125s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000096s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000229s ]
+
+[ 2015-04-23T10:23:03+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=logindo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000160s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000104s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000203s ]
+NOTIC: [8] Undefined index: wecha_id /home/freephp/www/dswx/Application/Home/Controller/UserWxController.class.php 第 11 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.000676s ]
+SQL: SELECT * FROM `t_user` WHERE ( `user_username` = 'sweetnow' ) AND ( `user_pass` = 'c7a5e8550d05683dba836bd27779a33e' ) LIMIT 1   [ RunTime:0.000220s ]
+SQL: UPDATE `t_user` SET `status`=1 WHERE ( `user_username` = 'sweetnow' ) AND ( `user_pass` = 'c7a5e8550d05683dba836bd27779a33e' ) [ RunTime:0.000145s ]
+
+[ 2015-04-23T10:23:08+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=logindo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000116s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000330s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.001521s ]
+SQL: SELECT `wecha_id`,`user_id`,`user_phone`,`user_username`,`user_sfz`,`tax_class` FROM `t_user` WHERE ( `wecha_id` = 'otjA79PVxkpEaU4fSM1qFcRjAnK_' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000491s ]
+SQL: SELECT * FROM `t_user` WHERE ( `user_username` = 'sweetnow' ) AND ( `user_pass` = 'c7a5e8550d05683dba836bd27779a33e' ) LIMIT 1   [ RunTime:0.000325s ]
+SQL: UPDATE `t_user` SET `status`=1 WHERE ( `user_username` = 'sweetnow' ) AND ( `user_pass` = 'c7a5e8550d05683dba836bd27779a33e' ) [ RunTime:0.000321s ]
+
+[ 2015-04-23T10:23:14+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=logindo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000259s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.000701s ]
+SQL: SELECT `wecha_id`,`user_id`,`user_phone`,`user_username`,`user_sfz`,`tax_class` FROM `t_user` WHERE ( `wecha_id` = 'otjA79PVxkpEaU4fSM1qFcRjAnK_' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000073s ]
+SQL: SELECT * FROM `t_user` WHERE ( `user_username` = 'sweetnow' ) AND ( `user_pass` = 'c7a5e8550d05683dba836bd27779a33e' ) LIMIT 1   [ RunTime:0.000141s ]
+SQL: UPDATE `t_user` SET `status`=1 WHERE ( `user_username` = 'sweetnow' ) AND ( `user_pass` = 'c7a5e8550d05683dba836bd27779a33e' ) [ RunTime:0.000344s ]
+
+[ 2015-04-23T10:23:40+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=logindo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000155s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.001202s ]
+SQL: SELECT `wecha_id`,`user_id`,`user_phone`,`user_username`,`user_sfz`,`tax_class` FROM `t_user` WHERE ( `wecha_id` = 'otjA79PVxkpEaU4fSM1qFcRjAnK_' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000141s ]
+SQL: SELECT * FROM `t_user` WHERE ( `user_username` = 'sweetnow' ) AND ( `user_pass` = 'c7a5e8550d05683dba836bd27779a33e' ) LIMIT 1   [ RunTime:0.000144s ]
+SQL: UPDATE `t_user` SET `status`=1 WHERE ( `user_username` = 'sweetnow' ) AND ( `user_pass` = 'c7a5e8550d05683dba836bd27779a33e' ) [ RunTime:0.000308s ]
+
+[ 2015-04-23T10:23:48+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=logindo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000271s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.001387s ]
+SQL: SELECT `wecha_id`,`user_id`,`user_phone`,`user_username`,`user_sfz`,`tax_class` FROM `t_user` WHERE ( `wecha_id` = 'otjA79PVxkpEaU4fSM1qFcRjAnK_' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000127s ]
+SQL: SELECT * FROM `t_user` WHERE ( `user_username` = 'sweetnow' ) AND ( `user_pass` = 'c7a5e8550d05683dba836bd27779a33e' ) LIMIT 1   [ RunTime:0.000237s ]
+SQL: UPDATE `t_user` SET `status`=1 WHERE ( `user_username` = 'sweetnow' ) AND ( `user_pass` = 'c7a5e8550d05683dba836bd27779a33e' ) [ RunTime:0.000341s ]
+
+[ 2015-04-23T10:23:48+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=logindo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000450s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000074s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000151s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.000651s ]
+SQL: SELECT `wecha_id`,`user_id`,`user_phone`,`user_username`,`user_sfz`,`tax_class` FROM `t_user` WHERE ( `wecha_id` = 'otjA79PVxkpEaU4fSM1qFcRjAnK_' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000057s ]
+SQL: SELECT * FROM `t_user` WHERE ( `user_username` = 'sweetnow' ) AND ( `user_pass` = 'c7a5e8550d05683dba836bd27779a33e' ) LIMIT 1   [ RunTime:0.000052s ]
+SQL: UPDATE `t_user` SET `status`=1 WHERE ( `user_username` = 'sweetnow' ) AND ( `user_pass` = 'c7a5e8550d05683dba836bd27779a33e' ) [ RunTime:0.000152s ]
+
+[ 2015-04-23T10:23:49+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=logindo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000066s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000307s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.001225s ]
+SQL: SELECT `wecha_id`,`user_id`,`user_phone`,`user_username`,`user_sfz`,`tax_class` FROM `t_user` WHERE ( `wecha_id` = 'otjA79PVxkpEaU4fSM1qFcRjAnK_' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000124s ]
+SQL: SELECT * FROM `t_user` WHERE ( `user_username` = 'sweetnow' ) AND ( `user_pass` = 'c7a5e8550d05683dba836bd27779a33e' ) LIMIT 1   [ RunTime:0.000070s ]
+SQL: UPDATE `t_user` SET `status`=1 WHERE ( `user_username` = 'sweetnow' ) AND ( `user_pass` = 'c7a5e8550d05683dba836bd27779a33e' ) [ RunTime:0.000208s ]
+
+[ 2015-04-23T10:24:04+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=logindo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000271s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.001208s ]
+SQL: SELECT `wecha_id`,`user_id`,`user_phone`,`user_username`,`user_sfz`,`tax_class` FROM `t_user` WHERE ( `wecha_id` = 'otjA79PVxkpEaU4fSM1qFcRjAnK_' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000153s ]
+SQL: SELECT * FROM `t_user` WHERE ( `user_username` = 'sweetnow' ) AND ( `user_pass` = 'c7a5e8550d05683dba836bd27779a33e' ) LIMIT 1   [ RunTime:0.000148s ]
+SQL: UPDATE `t_user` SET `status`=1 WHERE ( `user_username` = 'sweetnow' ) AND ( `user_pass` = 'c7a5e8550d05683dba836bd27779a33e' ) [ RunTime:0.000358s ]
+
+[ 2015-04-23T10:24:48+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000206s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000136s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000298s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.001040s ]
+SQL: SELECT `wecha_id`,`user_id`,`user_phone`,`user_username`,`user_sfz`,`tax_class` FROM `t_user` WHERE ( `wecha_id` = 'otjA79PVxkpEaU4fSM1qFcRjAnK_' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000152s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000217s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005270s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005390s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000086s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000164s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000061s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000139s ]
+
+[ 2015-04-23T10:24:49+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000293s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000297s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.000651s ]
+SQL: SELECT `wecha_id`,`user_id`,`user_phone`,`user_username`,`user_sfz`,`tax_class` FROM `t_user` WHERE ( `wecha_id` = 'otjA79PVxkpEaU4fSM1qFcRjAnK_' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000058s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000201s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003095s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003177s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000054s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000052s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000127s ]
+
+[ 2015-04-23T10:27:09+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000163s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.000774s ]
+SQL: SELECT `wecha_id`,`user_id`,`user_phone`,`user_username`,`user_sfz`,`tax_class` FROM `t_user` WHERE ( `wecha_id` = 'otjA79PVxkpEaU4fSM1qFcRjAnK_' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000086s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000113s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000222s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003843s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003951s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000084s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000176s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000070s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000161s ]
+
+[ 2015-04-23T10:27:28+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=logindo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000209s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000114s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000274s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.000791s ]
+SQL: SELECT `wecha_id`,`user_id`,`user_phone`,`user_username`,`user_sfz`,`tax_class` FROM `t_user` WHERE ( `wecha_id` = 'otjA79PVxkpEaU4fSM1qFcRjAnK_' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000082s ]
+SQL: SELECT * FROM `t_user` WHERE ( `user_username` = 'sweetnow' ) AND ( `user_pass` = 'c7a5e8550d05683dba836bd27779a33e' ) LIMIT 1   [ RunTime:0.000079s ]
+SQL: UPDATE `t_user` SET `status`=1 WHERE ( `user_username` = 'sweetnow' ) AND ( `user_pass` = 'c7a5e8550d05683dba836bd27779a33e' ) [ RunTime:0.000176s ]
+
+[ 2015-04-23T10:27:29+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Member&a=index&token=&wecha_id=otjA79PVxkpEaU4fSM1qFcRjAnK_
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000089s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000213s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.000875s ]
+SQL: SELECT `wecha_id`,`user_id`,`user_phone`,`user_username`,`user_sfz`,`tax_class` FROM `t_user` WHERE ( `wecha_id` = 'otjA79PVxkpEaU4fSM1qFcRjAnK_' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000117s ]
+SQL: SELECT * FROM `t_user` WHERE ( `wecha_id` = 'otjA79PVxkpEaU4fSM1qFcRjAnK_' ) AND ( `status` IN ('1','2') ) LIMIT 1   [ RunTime:0.000333s ]
+
+[ 2015-04-23T10:27:29+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Member&a=user&token=&wecha_id=otjA79PVxkpEaU4fSM1qFcRjAnK_
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000175s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000119s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000318s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.000757s ]
+SQL: SELECT `wecha_id`,`user_id`,`user_phone`,`user_username`,`user_sfz`,`tax_class` FROM `t_user` WHERE ( `wecha_id` = 'otjA79PVxkpEaU4fSM1qFcRjAnK_' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000069s ]
+SQL: SELECT * FROM `t_user` WHERE ( `wecha_id` = 'otjA79PVxkpEaU4fSM1qFcRjAnK_' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000223s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000107s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000228s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005067s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005221s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000127s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000305s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000132s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000348s ]
+
+[ 2015-04-23T10:27:39+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=loginout1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000187s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000267s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.001257s ]
+SQL: SELECT `wecha_id`,`user_id`,`user_phone`,`user_username`,`user_sfz`,`tax_class` FROM `t_user` WHERE ( `wecha_id` = 'otjA79PVxkpEaU4fSM1qFcRjAnK_' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000222s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.000966s ]
+SQL: SHOW COLUMNS FROM `t_company` [ RunTime:0.000935s ]
+SQL: SELECT * FROM `t_user` WHERE ( `wecha_id` = 'otjA79PVxkpEaU4fSM1qFcRjAnK_' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000116s ]
+SQL: UPDATE `t_user` SET `status`=2 WHERE ( `wecha_id` = 'otjA79PVxkpEaU4fSM1qFcRjAnK_' ) AND ( `status` = 1 ) [ RunTime:0.000424s ]
+
+[ 2015-04-23T10:27:40+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000077s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000377s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000255s ]
+NOTIC: [8] Undefined index: wecha_id /home/freephp/www/dswx/Application/Home/Controller/UserWxController.class.php 第 11 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000166s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000372s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005817s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000139s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000281s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000106s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000260s ]
+
+[ 2015-04-23T10:28:19+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Member&a=findBack
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000187s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000098s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000218s ]
+NOTIC: [8] Undefined index: wecha_id /home/freephp/www/dswx/Application/Home/Controller/UserWxController.class.php 第 11 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.000920s ]
+SQL: SELECT * FROM `t_user` WHERE ( `user_email` = '401112769@qq.com' ) LIMIT 1   [ RunTime:0.000459s ]
+SQL: UPDATE `t_user` SET `user_pass`='33f32c7985864d3e34e8cf0c08de8104' WHERE ( `user_id` = 106 ) [ RunTime:0.047850s ]
+SQL: SHOW COLUMNS FROM `t_company` [ RunTime:0.000853s ]
+SQL: SELECT * FROM `t_company` WHERE ( `company_email` = '401112769@qq.com' ) LIMIT 1   [ RunTime:0.000382s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000139s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000299s ]
+
+[ 2015-04-23T10:28:21+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Member&a=findBack
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000170s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000106s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000239s ]
+NOTIC: [8] Undefined index: wecha_id /home/freephp/www/dswx/Application/Home/Controller/UserWxController.class.php 第 11 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.001710s ]
+SQL: SELECT * FROM `t_user` WHERE ( `user_email` = '401112769@qq.com' ) LIMIT 1   [ RunTime:0.000505s ]
+SQL: UPDATE `t_user` SET `user_pass`='8e46f342bf6234eb76e2d732deb6f089' WHERE ( `user_id` = 106 ) [ RunTime:0.000359s ]
+SQL: SHOW COLUMNS FROM `t_company` [ RunTime:0.001193s ]
+SQL: SELECT * FROM `t_company` WHERE ( `company_email` = '401112769@qq.com' ) LIMIT 1   [ RunTime:0.000263s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000133s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000292s ]
+
+[ 2015-04-23T10:29:10+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=first&new_reg=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000155s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000149s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000336s ]
+NOTIC: [8] Undefined index: wecha_id /home/freephp/www/dswx/Application/Home/Controller/UserWxController.class.php 第 11 行.
+NOTIC: [8] Undefined index: user_id /home/freephp/www/dswx/Application/Home/Controller/LoginController.class.php 第 105 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000202s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003434s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003551s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000083s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000178s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000072s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000166s ]
+
+[ 2015-04-23T10:29:15+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=companyshow
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000278s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000171s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000411s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.000968s ]
+SQL: SELECT `wecha_id`,`user_id`,`user_phone`,`user_username`,`user_sfz`,`tax_class` FROM `t_user` WHERE ( `wecha_id` = 'otjA7qaiJQABV56xLWO8RXfo_pPc' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000336s ]
+SQL: SHOW COLUMNS FROM `t_company` [ RunTime:0.000652s ]
+SQL: SELECT `company_name`,`company_phone`,`company_pass`,`company_tax`,`company_class`,`tax_class`,`wecha_id`,`company_username`,`company_date`,`status`,`company_email` FROM `t_company` WHERE ( `wecha_id` = 'otjA7qaiJQABV56xLWO8RXfo_pPc' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000259s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000139s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000263s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039849s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039951s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000077s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000154s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000060s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000135s ]
+
+[ 2015-04-23T10:29:21+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=usershow
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000075s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000392s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000086s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000193s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.000718s ]
+SQL: SELECT `wecha_id`,`user_id`,`user_phone`,`user_username`,`user_sfz`,`tax_class` FROM `t_user` WHERE ( `wecha_id` = 'otjA7qaiJQABV56xLWO8RXfo_pPc' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000081s ]
+SQL: SHOW COLUMNS FROM `t_company` [ RunTime:0.000594s ]
+SQL: SELECT `company_name`,`company_phone`,`company_pass`,`company_tax`,`company_class`,`tax_class`,`wecha_id`,`company_username`,`company_date`,`status`,`company_email` FROM `t_company` WHERE ( `wecha_id` = 'otjA7qaiJQABV56xLWO8RXfo_pPc' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000084s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000104s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000189s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003252s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003336s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000062s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000136s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000060s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000136s ]
+
+[ 2015-04-23T10:30:08+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000274s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.000792s ]
+SQL: SELECT `wecha_id`,`user_id`,`user_phone`,`user_username`,`user_sfz`,`tax_class` FROM `t_user` WHERE ( `wecha_id` = 'otjA7qaiJQABV56xLWO8RXfo_pPc' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000154s ]
+SQL: SHOW COLUMNS FROM `t_company` [ RunTime:0.001118s ]
+SQL: SELECT `company_name`,`company_phone`,`company_pass`,`company_tax`,`company_class`,`tax_class`,`wecha_id`,`company_username`,`company_date`,`status`,`company_email` FROM `t_company` WHERE ( `wecha_id` = 'otjA7qaiJQABV56xLWO8RXfo_pPc' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000144s ]
+NOTIC: [8] Undefined index: taxclass /home/freephp/www/dswx/Application/Home/Controller/LoginController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.001012s ]
+SQL: SHOW COLUMNS FROM `t_company` [ RunTime:0.000833s ]
+SQL: SELECT * FROM `t_user` WHERE ( `user_username` = 'jialilue' ) AND ( `status` IN ('1','2') ) LIMIT 1   [ RunTime:0.000374s ]
+NOTIC: [8] Undefined variable: phone /home/freephp/www/dswx/Application/Home/Controller/LoginController.class.php 第 585 行.
+SQL: SELECT * FROM `t_company` WHERE ( `company_username` = null ) AND ( `status` IN ('1','2') ) LIMIT 1   [ RunTime:0.000137s ]
+SQL: SELECT * FROM `t_user` WHERE ( `status` IN ('1','2') ) AND ( `wecha_id` = 'otjA7qaiJQABV56xLWO8RXfo_pPc' ) LIMIT 1   [ RunTime:0.000317s ]
+SQL: SELECT * FROM `t_company` WHERE ( `status` IN ('1','2') ) AND ( `wecha_id` = 'otjA7qaiJQABV56xLWO8RXfo_pPc' ) LIMIT 1   [ RunTime:0.000298s ]
+SQL: INSERT INTO `t_user` (`user_username`,`user_name`,`user_phone`,`user_pass`,`user_sfz`,`tax_class`,`user_date`,`wecha_id`,`status`,`user_email`) VALUES ('jialilue','jialilue','18784991773','42261ca75345ec6a7eb8ef15341d1ca1','510109198812121235',null,'2015-04-23 10:30:08','otjA7qaiJQABV56xLWO8RXfo_pPc',1,'llfightings@163.com') [ RunTime:0.000375s ]
+NOTIC: [8] Undefined index: access_token /home/freephp/www/dswx/Application/Home/Controller/LoginController.class.php 第 654 行.
+NOTIC: [8] Undefined variable: token /home/freephp/www/dswx/Application/Home/Controller/LoginController.class.php 第 68 行.
+
+[ 2015-04-23T10:30:09+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Member&a=user&wecha_id=otjA7qaiJQABV56xLWO8RXfo_pPc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000105s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000231s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.000927s ]
+SQL: SELECT `wecha_id`,`user_id`,`user_phone`,`user_username`,`user_sfz`,`tax_class` FROM `t_user` WHERE ( `wecha_id` = 'otjA7qaiJQABV56xLWO8RXfo_pPc' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000287s ]
+SQL: SELECT * FROM `t_user` WHERE ( `wecha_id` = 'otjA7qaiJQABV56xLWO8RXfo_pPc' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000263s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000149s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000326s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006637s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006822s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000114s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000268s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000107s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000278s ]
+
+[ 2015-04-23T10:30:11+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=loginout1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000313s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000115s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000275s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.001181s ]
+SQL: SELECT `wecha_id`,`user_id`,`user_phone`,`user_username`,`user_sfz`,`tax_class` FROM `t_user` WHERE ( `wecha_id` = 'otjA7qaiJQABV56xLWO8RXfo_pPc' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000154s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.001131s ]
+SQL: SHOW COLUMNS FROM `t_company` [ RunTime:0.000700s ]
+SQL: SELECT * FROM `t_user` WHERE ( `wecha_id` = 'otjA7qaiJQABV56xLWO8RXfo_pPc' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000162s ]
+SQL: UPDATE `t_user` SET `status`=2 WHERE ( `wecha_id` = 'otjA7qaiJQABV56xLWO8RXfo_pPc' ) AND ( `status` = 1 ) [ RunTime:0.000452s ]
+
+[ 2015-04-23T10:30:12+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000073s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000408s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000116s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000270s ]
+NOTIC: [8] Undefined index: wecha_id /home/freephp/www/dswx/Application/Home/Controller/UserWxController.class.php 第 11 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000118s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000252s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004925s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005089s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000116s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000093s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000238s ]
+
+[ 2015-04-23T10:30:23+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=logindo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000111s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000120s ]
+NOTIC: [8] Undefined index: wecha_id /home/freephp/www/dswx/Application/Home/Controller/UserWxController.class.php 第 11 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.000849s ]
+SQL: SELECT * FROM `t_user` WHERE ( `user_username` = 'jialilue' ) AND ( `user_pass` = '42261ca75345ec6a7eb8ef15341d1ca1' ) LIMIT 1   [ RunTime:0.000207s ]
+SQL: UPDATE `t_user` SET `status`=1 WHERE ( `user_username` = 'jialilue' ) AND ( `user_pass` = '42261ca75345ec6a7eb8ef15341d1ca1' ) [ RunTime:0.000368s ]
+
+[ 2015-04-23T10:30:24+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Member&a=index&token=&wecha_id=otjA7qaiJQABV56xLWO8RXfo_pPc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000173s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000074s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000190s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.000698s ]
+SQL: SELECT `wecha_id`,`user_id`,`user_phone`,`user_username`,`user_sfz`,`tax_class` FROM `t_user` WHERE ( `wecha_id` = 'otjA7qaiJQABV56xLWO8RXfo_pPc' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000333s ]
+SQL: SELECT * FROM `t_user` WHERE ( `wecha_id` = 'otjA7qaiJQABV56xLWO8RXfo_pPc' ) AND ( `status` IN ('1','2') ) LIMIT 1   [ RunTime:0.000330s ]
+
+[ 2015-04-23T10:30:24+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Member&a=user&token=&wecha_id=otjA7qaiJQABV56xLWO8RXfo_pPc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000151s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000118s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000263s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.000926s ]
+SQL: SELECT `wecha_id`,`user_id`,`user_phone`,`user_username`,`user_sfz`,`tax_class` FROM `t_user` WHERE ( `wecha_id` = 'otjA7qaiJQABV56xLWO8RXfo_pPc' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000110s ]
+SQL: SELECT * FROM `t_user` WHERE ( `wecha_id` = 'otjA7qaiJQABV56xLWO8RXfo_pPc' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000363s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000212s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004426s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004543s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000076s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000179s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000074s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000176s ]
+
+[ 2015-04-23T10:30:26+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=loginout1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000127s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000342s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.000738s ]
+SQL: SELECT `wecha_id`,`user_id`,`user_phone`,`user_username`,`user_sfz`,`tax_class` FROM `t_user` WHERE ( `wecha_id` = 'otjA7qaiJQABV56xLWO8RXfo_pPc' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000116s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.000764s ]
+SQL: SHOW COLUMNS FROM `t_company` [ RunTime:0.000565s ]
+SQL: SELECT * FROM `t_user` WHERE ( `wecha_id` = 'otjA7qaiJQABV56xLWO8RXfo_pPc' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000120s ]
+SQL: UPDATE `t_user` SET `status`=2 WHERE ( `wecha_id` = 'otjA7qaiJQABV56xLWO8RXfo_pPc' ) AND ( `status` = 1 ) [ RunTime:0.000192s ]
+
+[ 2015-04-23T10:30:28+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000070s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000407s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000150s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000433s ]
+NOTIC: [8] Undefined index: wecha_id /home/freephp/www/dswx/Application/Home/Controller/UserWxController.class.php 第 11 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000141s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000318s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005804s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005957s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000115s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000096s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000233s ]
+
+[ 2015-04-23T10:30:45+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Member&a=findBack
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000139s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000097s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000237s ]
+NOTIC: [8] Undefined index: wecha_id /home/freephp/www/dswx/Application/Home/Controller/UserWxController.class.php 第 11 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.000859s ]
+SQL: SELECT * FROM `t_user` WHERE ( `user_email` = 'llfightings@163.com' ) LIMIT 1   [ RunTime:0.000274s ]
+SQL: UPDATE `t_user` SET `user_pass`='d4dd8d23405197d9375c8aff1cbb540d' WHERE ( `user_id` = 108 ) [ RunTime:0.000226s ]
+SQL: SHOW COLUMNS FROM `t_company` [ RunTime:0.001007s ]
+SQL: SELECT * FROM `t_company` WHERE ( `company_email` = 'llfightings@163.com' ) LIMIT 1   [ RunTime:0.000313s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000133s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000289s ]
+
+[ 2015-04-23T10:31:16+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=logindo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000071s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000409s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000191s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000481s ]
+NOTIC: [8] Undefined index: wecha_id /home/freephp/www/dswx/Application/Home/Controller/UserWxController.class.php 第 11 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.000941s ]
+SQL: SELECT * FROM `t_user` WHERE ( `user_username` = 'jialilue' ) AND ( `user_pass` = '275946b5533d00928e624a0a67c18b7d' ) LIMIT 1   [ RunTime:0.000371s ]
+SQL: SHOW COLUMNS FROM `t_company` [ RunTime:0.001012s ]
+SQL: SELECT * FROM `t_company` WHERE ( `company_username` = 'jialilue' ) AND ( `company_pass` = '275946b5533d00928e624a0a67c18b7d' ) LIMIT 1   [ RunTime:0.000354s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.001137s ]
+SQL: SHOW COLUMNS FROM `t_company` [ RunTime:0.000572s ]
+SQL: SELECT * FROM `t_user` WHERE ( `user_username` = 'jialilue' ) AND ( `status` IN ('1','2') ) LIMIT 1   [ RunTime:0.000298s ]
+
+[ 2015-04-23T10:31:26+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=logindo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000115s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000278s ]
+NOTIC: [8] Undefined index: wecha_id /home/freephp/www/dswx/Application/Home/Controller/UserWxController.class.php 第 11 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.000981s ]
+SQL: SELECT * FROM `t_user` WHERE ( `user_username` = 'jialilue' ) AND ( `user_pass` = '42261ca75345ec6a7eb8ef15341d1ca1' ) LIMIT 1   [ RunTime:0.000347s ]
+SQL: SHOW COLUMNS FROM `t_company` [ RunTime:0.000788s ]
+SQL: SELECT * FROM `t_company` WHERE ( `company_username` = 'jialilue' ) AND ( `company_pass` = '42261ca75345ec6a7eb8ef15341d1ca1' ) LIMIT 1   [ RunTime:0.000303s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.001048s ]
+SQL: SHOW COLUMNS FROM `t_company` [ RunTime:0.000999s ]
+SQL: SELECT * FROM `t_user` WHERE ( `user_username` = 'jialilue' ) AND ( `status` IN ('1','2') ) LIMIT 1   [ RunTime:0.000143s ]
+
+[ 2015-04-23T10:31:53+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=logindo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000142s ]
+NOTIC: [8] Undefined index: wecha_id /home/freephp/www/dswx/Application/Home/Controller/UserWxController.class.php 第 11 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.000865s ]
+SQL: SELECT * FROM `t_user` WHERE ( `user_username` = 'jialilue' ) AND ( `user_pass` = 'd4dd8d23405197d9375c8aff1cbb540d' ) LIMIT 1   [ RunTime:0.000236s ]
+SQL: UPDATE `t_user` SET `status`=1 WHERE ( `user_username` = 'jialilue' ) AND ( `user_pass` = 'd4dd8d23405197d9375c8aff1cbb540d' ) [ RunTime:0.000218s ]
+
+[ 2015-04-23T10:31:54+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Member&a=index&token=&wecha_id=otjA7qaiJQABV56xLWO8RXfo_pPc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000149s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000426s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000121s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000293s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.001094s ]
+SQL: SELECT `wecha_id`,`user_id`,`user_phone`,`user_username`,`user_sfz`,`tax_class` FROM `t_user` WHERE ( `wecha_id` = 'otjA7qaiJQABV56xLWO8RXfo_pPc' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000427s ]
+SQL: SELECT * FROM `t_user` WHERE ( `wecha_id` = 'otjA7qaiJQABV56xLWO8RXfo_pPc' ) AND ( `status` IN ('1','2') ) LIMIT 1   [ RunTime:0.000610s ]
+
+[ 2015-04-23T10:31:54+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Member&a=user&token=&wecha_id=otjA7qaiJQABV56xLWO8RXfo_pPc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000177s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000121s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000303s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.000783s ]
+SQL: SELECT `wecha_id`,`user_id`,`user_phone`,`user_username`,`user_sfz`,`tax_class` FROM `t_user` WHERE ( `wecha_id` = 'otjA7qaiJQABV56xLWO8RXfo_pPc' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000123s ]
+SQL: SELECT * FROM `t_user` WHERE ( `wecha_id` = 'otjA7qaiJQABV56xLWO8RXfo_pPc' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000330s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000214s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004177s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004283s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000079s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000171s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000069s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000160s ]
+
+[ 2015-04-23T10:36:37+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=loginout1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000118s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000280s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/freephp/www/dswx/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.001239s ]
+SQL: SELECT `wecha_id`,`user_id`,`user_phone`,`user_username`,`user_sfz`,`tax_class` FROM `t_user` WHERE ( `wecha_id` = 'otjA7qaiJQABV56xLWO8RXfo_pPc' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000151s ]
+SQL: SHOW COLUMNS FROM `t_user` [ RunTime:0.001084s ]
+SQL: SHOW COLUMNS FROM `t_company` [ RunTime:0.001068s ]
+SQL: SELECT * FROM `t_user` WHERE ( `wecha_id` = 'otjA7qaiJQABV56xLWO8RXfo_pPc' ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000107s ]
+SQL: UPDATE `t_user` SET `status`=2 WHERE ( `wecha_id` = 'otjA7qaiJQABV56xLWO8RXfo_pPc' ) AND ( `status` = 1 ) [ RunTime:0.000443s ]
+
+[ 2015-04-23T10:36:38+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000204s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000118s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000259s ]
+NOTIC: [8] Undefined index: wecha_id /home/freephp/www/dswx/Application/Home/Controller/UserWxController.class.php 第 11 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000143s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000306s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004054s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004159s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000086s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000174s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000068s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000156s ]
+
+[ 2015-04-23T10:36:45+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=login&token=&wecha_id=otjA7qaiJQABV56xLWO8RXfo_pPc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000165s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000120s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000255s ]
+NOTIC: [8] Undefined index: wecha_id /home/freephp/www/dswx/Application/Home/Controller/UserWxController.class.php 第 11 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000150s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000326s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005139s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005295s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000127s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000258s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000099s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000233s ]
+
+[ 2015-04-23T10:36:49+08:00 ] 127.0.0.1 /dswx/index.php?m=&c=Login&a=first&new_reg=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000130s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000346s ]
+NOTIC: [8] Undefined index: wecha_id /home/freephp/www/dswx/Application/Home/Controller/UserWxController.class.php 第 11 行.
+NOTIC: [8] Undefined index: user_id /home/freephp/www/dswx/Application/Home/Controller/LoginController.class.php 第 105 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000138s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000352s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005915s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006095s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000101s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000113s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000248s ]
+

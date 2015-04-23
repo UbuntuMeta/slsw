@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<script language="javascript" type="text/javascript" src="__STATIC__/My97DatePicker/WdatePicker.js"></script>
+<link href="__CSS__/table_form.css" rel="stylesheet" type="text/css"/>
+<title></title>
+</head>
+<style>
+div a{padding:1px 3px; margin:3px; border:1px solid #d0d0d0; text-decoration:none}
+</style>
+<body>
+<div class="header-data lr10">
+<form action="{:U('index')}" method="post" id="form1">
+<input name="mydate1" type="text" id="mydate" onClick="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true,maxDate:'%y-%M-%d'})" placeholder="查询日期" value="{$mydate1}" class="input-texts"/>
+<input name="mydate2" type="text" id="mydate" onClick="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true,maxDate:'%y-%M-%d'})" placeholder="查询日期" value="{$mydate2}" class="input-texts"/>
+<input type="submit" name="button" id="button" value="查询"  class="button"/>
+&nbsp;&nbsp;<a href="{$purl}"><input type="button" name="button" id="button" value="导出Excel"  class="button"/></a>
+</form>
+</div>
+<div class="table-list">
+<table>
+	<tr class="header"> 
+    <td class="w50">编号</td>
+      <td class="w50">预约时间</td>
+      <td>预约类名</td>
+	  <td class="w50">预约用户名</td>
+	  <td>用户手机号</td>
+	  <td>用户类型<td>
+	  <td>用户名</td>
+	  <td>公司类型</td>
+	  <td>预约号</td>
+	  <td>预约状态</td>
+	  <td>状态修改</td>
+      <td class="w200">操作</td>
+      
+      
+    </tr>
+    <volist name="volist" id="item">
+    <form action="__URL__/update/" method="post">
+	<tr> 
+      <td>{$item.order_id}</td>
+      <td>{$item.order_date}</td>
+      <td>{$item.business_name}</td>
+	   <td>{$item.user_name}</td>
+	    <td>{$item.phone}</td>
+	  <td>{$item.cclass}<td>
+	  <td>{$item.name}</td>
+	  <td>{$item.company_class}</td>
+	  
+      <td>{$item.order_number}</td>
+      <td>
+	  <if condition="($item.order_status eq 1)">已预约
+  
+  
+  <elseif condition="($item.order_status eq 2)"/>已处理<elseif condition="($item.order_status eq 3)"/>未到<elseif condition="($item.order_status eq 4)"/>已取消</if>
+	  
+	  
+	  </td>
+	  <td>
+	  <select name="status">
+		<option value="1">已预约</value>
+		<option value="2">已处理</value>
+		<option value="3">未到</value>
+		<option value="4">已取消</value>
+		<option value="5">删除</value>
+	  </select>
+	  
+	  </td>
+      <td>
+	  <input type="hidden" value="{$item.order_id}" name="order_id">
+	  <input type="submit" value="修改"></td>
+	  
+      
+    </tr>
+	</form>
+    </volist>
+    
+	<tr class="header"> 
+    <td colspan="3"><span class="current">共{$count}条</span>{$pager_bar}</td>
+    </tr>
+</table>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<link href="__CSS__/table_form.css" rel="stylesheet" type="text/css"/>
+<script src="__STATIC__/kindeditor4.1.10/kindeditor-min.js" type="text/javascript"></script>
+<script>
+KindEditor.ready(function(K) {
+				var editor;
+				KindEditor.ready(function(K) {
+					editor = K.create('textarea[name="connet"]', {
+					pasteType : 1,
+					afterBlur: function(){this.sync()}	
+					});
+				});
+				K('#buttonimg').click(function() {
+					editor.loadPlugin('image', function() {
+						editor.plugin.imageDialog({
+							imageUrl : K('#pic').val(),
+							clickFn : function(url, title, width, height, border, align) {
+								K('#pic').val(url);
+								editor.hideDialog();
+							}
+						});
+					});
+				});
+			});
+</script>
+<title>354</title>
+</head>
+<body>
+<div class="pad_10">
+<form action="{:U('insert')}" method="post" name="myform" id="myform">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="table_form">
+<tr> 
+      <th width="120">URL:</th>
+      <td>{:C('HTTP_URL')}/api/{$vo.token|default="你的TOKEN"}</td>
+    </tr>
+	<tr> 
+	  <th>TOKEN:</th>
+	  <td><input type="text" name="token" id="token" class="input-text" value="{$vo.token}" required="required"></td>
+	  </tr>
+    <tr>
+      <th></th>
+      <td><input type="submit" name="dosubmit" id="dosubmit" class="button" value=" 确 定 ">
+        <input name="id" type="hidden" id="id" value="1" />
+        <input type="button" name="dosubmit" id="dosubmit" class="button" value=" 返 回 " onclick="javascript:history.back(-1)">
+        </td>
+    </tr>
+</table>
+</form>
+
+</div>
+</body>
+</html>

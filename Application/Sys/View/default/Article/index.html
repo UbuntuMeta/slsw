@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<link href="__CSS__/table_form.css" rel="stylesheet" type="text/css"/>
+<title>354</title>
+</head>
+<style>
+div a{padding:1px 3px; margin:3px; border:1px solid #d0d0d0; text-decoration:none}
+</style>
+<body>
+<div class="table-list">
+<table>
+	<tr class="header"> 
+    <td class="w80">编号</td>
+    <td>文章标题</td>
+      <td>所属栏目</td>
+      <td>显示作者</td>
+      <td class="w200">添加时间</td>
+      <td class="w50">状态</td>
+      <td class="center w200"><a href="{:U('add')}" class="button">添加文章</a></td>
+    </tr>
+    <volist name="list" id="item">
+    <tr> 
+      <td>{$item.id}</td>
+      <td>{$item.title}</td>
+      <td>{$item.menu_id|Get_Art}</td>
+      <td>{$item.author}</td>
+      <td>{$item.addtime}</td>
+      <td><IMG style="cursor:pointer" onClick="setopen('{$item.id}','is_show')" id="is_show_{$item.id}" src="__CSS__/<if condition='$item.is_show eq 1 '>ok.gif<else/>no.gif</if>"></td>
+      <td><a href="{:U('add',array('id'=>$item['id']))}" class="button">编辑</a><a href="{:U('del',array('id'=>$item['id']))}" onclick="return confirm('您确实要执行删除？');" class="button">删除</a> <a href="{:U('Home/Article/show',array('id'=>$item['id']))}"  class="button" target="_blank">预览</a></td>
+    </tr>
+    </volist>
+    
+	<tr class="header"> 
+    <td colspan="7">{$pager_bar}</td>
+    </tr>
+</table>
+</div>
+</body>
+</html>

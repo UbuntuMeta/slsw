@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script charset="utf-8" src="__JQ__/jquery.js"></script>
+<title>回复</title>
+</head>
+<body>
+	<form action="{:U('Sys/Message/reply')}?id={$id}" method="post" onSubmit="return sub();">
+		留言内容：<br><textarea cols="33" name="msg_descript" id="cont"	style="width: 600px;height: 150px;">{$result[0][msg_descript]}</textarea><br>
+		<br><br>回复内容：<br>
+		<textarea cols="33" name="reply_descript" id="cont" style="width: 600px;height: 150px;">{$result[0][reply_descript]}</textarea><span id="span3"></span>
+		<br>
+		<input id="submit" type="submit" name="submit" value="提交" />
+	</form>
+	<script>
+		function sub() {
+			var cont = $("#cont").val();
+			if (cont == '') {
+				$("#span3").html("<font color='red'>内容不能为空</font>");
+				return false;
+			} else {
+				return true;
+			}
+		}
+	</script>
+</body>
+</html>

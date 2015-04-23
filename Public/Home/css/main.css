@@ -1,0 +1,154 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{ margin:0 auto; padding:0;}
+html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body {margin: 0; font-size:1em; line-height: 1.231;/* background:#e5e5e5;*/}
+ul,li,dl,dt,dd {
+	display:block;
+	list-style:none;
+}
+a {
+	text-decoration:none;
+	outline:none;
+	color:#000;
+}
+img {
+	border:0;	
+}
+
+.clear {
+	background:none;
+	border:0;
+	clear:both;
+	display:block;
+	float:none;
+	font-size:0;
+	overflow:hidden;
+	visibility:hidden;
+	width:0;
+	height:0;
+}
+
+.land{ display:block; width:100%;   }
+
+.land .login{ width:90%; 
+              height:100%;  
+              margin:28% 5% 0 5%; 
+			  min-height:80px; 
+			  background: #FFFFFF;  
+			  filter:alpha(opacity=50);-moz-opacity:0.5;opacity: 0.5; 
+			  
+			  }
+.sa{ position:relative; top:20%;}
+.land .login ul{ width:100%; display:block;}
+.land .login ul li{ display:block; width:100%; margin-bottom:15px;   }
+.txt{ width:90%; display:block; padding:5px; height:30px; border:1px solid #cccccc;}
+.txt_b{ width:90%; background:#000000; color:#FFFFFF; line-height:25px; margin-bottom:20px; height:45px; font-size:1.5em; border:0; margin:0 5%}
+
+	
+	  
+.land .login .sa1{ text-align:center; margin-bottom:5%; }
+.land .login .sa1 img{ width:50%;}
+
+/*产品列表*/
+.list{display:block; width:100%; background:#f8f8f8; }
+.title{ width:98%; margin:0 1% 0 1%; text-align:center;  border-bottom:1px solid #e5e5e5; line-height:150%; padding:2% 0 2% 0;  }
+.title img{ width:35%;}
+.fenl{position:absolute; left:5%; top:2%; }
+.fenl img{ width:90%;}
+.list ul{ width:98%; margin:0 1% 0 1%; display:block;}
+.list ul li{margin-top:2%; padding-bottom:2%; width:100%; float:left; border-bottom:1px dashed #e5e5e5;}
+.list .list_left{ float:left; width:36%; margin:2%; }
+.list_left img{ border:1px solid #c2c1a2; width:90%; padding:5% }
+.list .list_right{ float:right; width:60%; padding-top:2%;}
+
+.list .list_right b{ color:#76741f; font-weight:normal;}
+
+
+.content{display:block; width:100%; background:#f7f6f6; }
+.return{position:absolute; left:4%; top:2%; }
+.return img{ width:60%;}
+.sw1{ text-align:center; width:100%;}
+
+
+
+.members{display:block; width:100%; background:#f9f9f9; color: #666666; }
+.title_b{width:100%; text-align:center;  border-bottom:1px solid #e5e5e5; line-height:150%; padding:2% 0 2% 0;  background:#f7f6f6;}
+.information{ border:1px solid #e5e5e5; margin:5% 2% 5% 2%;
+    box-shadow:0px 0px 10px #CCCCCC;
+    -moz-box-shadow:0px 0px 10px #CCCCCC;
+    -webkit-box-shadow:0px 0px 10px #CCCCCC;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Shadow(color=#E9E9E9, direction=0, strength=6)\
+                progid:DXImageTransform.Microsoft.Shadow(color=#E9E9E9, direction=90, strength=6)\
+                progid:DXImageTransform.Microsoft.Shadow(color=#E9E9E9, direction=180, strength=6)\
+                progid:DXImageTransform.Microsoft.Shadow(color=#E9E9E9, direction=270, strength=6)";
+    *filter:progid:DXImageTransform.Microsoft.Shadow(color=#E9E9E9, direction=0, strength=6)
+            progid:DXImageTransform.Microsoft.Shadow(color=#E9E9E9, direction=90, strength=6)
+            progid:DXImageTransform.Microsoft.Shadow(color=#E9E9E9, direction=180, strength=6)
+            progid:DXImageTransform.Microsoft.Shadow(color=#E9E9E9, direction=270, strength=6);
+			}
+.title_c{ background:#f9f9f9; padding:2% 0 2% 3%;  }
+.information ul{ background:#FFFFFF;}
+.information ul li{line-height:200%; padding-left:3%;}
+.binding{border:1px solid #e5e5e5; margin:5% 20% 5% 20%; text-align:center; padding:2% 0 2% 0;
+    box-shadow:0px 0px 10px #CCCCCC;
+    -moz-box-shadow:0px 0px 10px #CCCCCC;
+    -webkit-box-shadow:0px 0px 10px #CCCCCC;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Shadow(color=#E9E9E9, direction=0, strength=6)\
+                progid:DXImageTransform.Microsoft.Shadow(color=#E9E9E9, direction=90, strength=6)\
+                progid:DXImageTransform.Microsoft.Shadow(color=#E9E9E9, direction=180, strength=6)\
+                progid:DXImageTransform.Microsoft.Shadow(color=#E9E9E9, direction=270, strength=6)";
+    *filter:progid:DXImageTransform.Microsoft.Shadow(color=#E9E9E9, direction=0, strength=6)
+            progid:DXImageTransform.Microsoft.Shadow(color=#E9E9E9, direction=90, strength=6)
+            progid:DXImageTransform.Microsoft.Shadow(color=#E9E9E9, direction=180, strength=6)
+            progid:DXImageTransform.Microsoft.Shadow(color=#E9E9E9, direction=270, strength=6);
+
+}
+.storage{border:1px solid #e5e5e5; margin:5% 2% 5% 2%; 
+    box-shadow:0px 0px 10px #CCCCCC;
+    -moz-box-shadow:0px 0px 10px #CCCCCC;
+    -webkit-box-shadow:0px 0px 10px #CCCCCC;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Shadow(color=#E9E9E9, direction=0, strength=6)\
+                progid:DXImageTransform.Microsoft.Shadow(color=#E9E9E9, direction=90, strength=6)\
+                progid:DXImageTransform.Microsoft.Shadow(color=#E9E9E9, direction=180, strength=6)\
+                progid:DXImageTransform.Microsoft.Shadow(color=#E9E9E9, direction=270, strength=6)";
+    *filter:progid:DXImageTransform.Microsoft.Shadow(color=#E9E9E9, direction=0, strength=6)
+            progid:DXImageTransform.Microsoft.Shadow(color=#E9E9E9, direction=90, strength=6)
+            progid:DXImageTransform.Microsoft.Shadow(color=#E9E9E9, direction=180, strength=6)
+            progid:DXImageTransform.Microsoft.Shadow(color=#E9E9E9, direction=270, strength=6);
+}
+.storage ul li{ background: #f6f6f6; border-bottom:3px solid #FFFFFF; line-height:220%; padding-left:3%; }
+.se1{ float:right; padding:0 2% 0 2%; background:#FFFFFF; border:1px solid #e5e5e5; margin-right:2%; margin-top:3%; height:20px; line-height:20px;  }
+
+.denglu{ display:block; width:100%;   }
+.bg{ background:#ededed;}
+.denglu .login_a{ width:90%; 
+              height:100%;  
+              max-width:480px; margin:8% 5% 0 5%; 
+			  height:auto; 
+			  min-height:80px; 
+			  background: #FFFFFF;  
+			  
+			  }
+			  
+.denglu .login_a ul{ width:100%; display:block;  padding-top:5%; }
+.denglu .login_a ul li{ display:block; width:100%; margin-bottom:15px; }
+.txt_a{ width:80%; display:block; padding:5px; height:25px; border:1px solid #CCCCCC; background:#f8f8f8;}
+.txt_c{ width:84%; background: #666; color:#FFFFFF; line-height:25px; margin-bottom:10px; height:40px; font-size:1.0em; margin:0 8% 5% 8%; border:0px;}
+.huiyuan{ line-height:200%; text-align:center; font-size:1.2em; border-bottom:1px solid #ededed; background:#FFFFFF; }
+
+
+/* 新增绑定页面 */
+
+.bangding{ text-align:center; line-height:200%; font-size:1.0em;}
+
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+-webkit-appearance: none;
+}
+

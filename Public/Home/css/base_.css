@@ -1,0 +1,86 @@
+@charset "utf-8";
+*{ margin:0 auto; padding:0;}
+html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body {margin: 0; font-size: 13px; line-height: 1.231; background:#e5e5e5;}
+ul li,li{ list-style:none}
+a {
+	text-decoration:none;
+	outline:none;
+}
+img {
+	border:0;	
+}
+
+.main{ display:block;width:92%; margin:2%; padding:2%; background:#0FC; border-radius:5px; -webkit-border-radius:5px; background:#FFF;}
+.no_background{ background:none;}
+.margin-bottom-top{margin-bottom:60px;margin-top:60px;}
+.margin-bottom{margin-bottom:60px;}
+.margin-top{margin-top:60px;}
+
+.header{ display:block; width:100%; height:45px; border-bottom:1px solid #ebebeb; position:fixed;top:0; line-height:45px; z-index:99999; background:#ededed}
+
+/*产品介绍*/
+.tea_main{display:block;/* background:url(../image/b0.jpg) no-repeat center; background-size:100% 100%; height:100%*/}
+.tea_main .tea_item{ width:100%; display:block; padding:6% 0; text-align:center}
+.tea_main .tea_item img{ width:55%}
+
+/*碧潭飘雪*/
+.btpx{ display:block; width:100%; min-height:100px;}
+.btpx .btpx_foot{display:block; width:100%; height:30%;line-height:30%;/* border-top:1px solid #ebebeb;*/ position:fixed;bottom:0; z-index:99999;}
+.btpx .btpx_foot ul{ width:100%; display:block; height:100%; text-align:center}
+.btpx .btpx_foot ul li{ width:25%; height:100%; float:left;padding: 0 4%}
+.btpx .btpx_foot ul li img{ height:100%; width:100%}
+.btpx .btpx_foot ul .zj{width:26%;}
+
+
+.footer{ display:block; width:100%; height:45px;/* border-top:1px solid #ebebeb;*/ position:fixed; bottom:0; line-height:45px; z-index:99999; background:#FAFAFA}
+.footer ul li{ width:25%; float:left; height:45px; display:block}
+.footer ul .li1{ background:url(image/a1.jpg) center no-repeat; background-size: auto 45px;}
+.footer ul .li2{ background:url(image/a03.jpg) center no-repeat; background-size: auto 45px;}
+.footer ul .li3{ background:url(image/a04.jpg) center no-repeat; background-size: auto 45px;}
+.footer ul .li4{ background:url(image/a05.jpg) center no-repeat; background-size: auto 45px;}
+
+.item{ width:100%; background:#0C9; min-height:80px; margin:5px 0;}
+
+
+
+/**/
+.page_five{ display:block; width:100%; min-height:100px;}
+.page_five .five_list{display:block; width:100%; height:30%; line-height:30%;/* border-top:1px solid #ebebeb;*/ position:fixed; top:35%; z-index:99999;}
+.page_five .five_list ul{ width:100%; display:block; height:100%; text-align:center}
+.page_five .five_list ul li{ width:30%; text-align:center; padding-top:3%; padding-bottom:3%;}
+.page_five .five_list li a{color:#FFFFFF;}
+.page_five .five_list li a:hover{ color:#000000;}
+.d_over{background-color: #FFFFFF;  filter:alpha(opacity=30);-moz-opacity:0.3;opacity: 0.3; }
+.d_out{color:#FFFFFF;}
+
+
+
+.page_one{ display:block; width:100%; min-height:100px; }
+.sharp{width:90%;margin:auto;  }
+.sharp .content div{padding:1%; text-indent:2em;}
+.content{ height:100%; min-height:100px; }
+
+.b1,.b2,.b3,.b4,.b5,.b6,.b7,.b8{height:1px; font-size:1px; overflow:hidden; display:block; }
+.b1,.b8{margin:0 5px;}
+.b2,.b7{margin:0 3px;border-right:2px solid; border-left:2px solid;}
+.b3,.b6{margin:0 2px;border-right:1px solid; border-left:1px solid;}
+.b4,.b5{margin:0 1px;border-right:1px solid; border-left:1px solid; height:2px;}
+.content {border-right:1px solid ;border-left:1px solid; }
+
+.color1 .b2,.color1 .b3,.color1 .b4,.color1 .b5,.color1 .b6,.color1 .b7,.color1 .content{border-color: #CCCCCC;}
+.color1 .b1,.color1 .b8{background:#CCCCCC;}
+.color1 .b2,.color1 .b3,.color1 .b4,.color1 .b5,.color1 .b6,.color1 .b7,.color1 .content{background: #FFFFFF;}
+
+.page_footer{display:block; width:100%; position:fixed; bottom:0;  z-index:99999; background:#FAFAFA}
+.page_footer ul li{ width:25%; float:left; padding:0 1%; }
+.page_footer .jb{ width:14%; }
+.page_footer ul li img{ height:100%; width:100%;}
+
+
+.page_two{display:block; width:100%; min-height:100px; }
+.two_top{ position:relative; z-index:99; width:50%; padding-top:20%; text-align:center;  }
+.two_foot{  position:relative; z-index:99; width:50%;  padding-top:10%; text-align:center; }
+.two_top img{ width:100%;}
+.two_foot img{ width:100%;}

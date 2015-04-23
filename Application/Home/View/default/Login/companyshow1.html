@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no" name="viewport">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<title>个体工商户注册</title>
+<link type="text/css" rel="stylesheet" href="__STYLE__/css/css1.css">
+<script src="__WAP__/jquery-1.10.2.min.js"></script>
+<script src="__PUBLIC__/static/laycode/layer.min.js" type="text/javascript"></script>
+
+</head>
+<body>
+
+<div class="top" >
+  <img src="__STYLE__/image/0_04.jpg" class="logo"><b>  手机快速注册</b>
+</div>
+<div class="clear"></div>
+
+<div class="box">
+  <div class="enterprise">
+    <div class="ent_title"><img src="__STYLE__/image/7_03.jpg" ><b>个体工商户注册</b></div>   
+    <div class="clear"></div>
+	<font color="red" size="2px">注意：所有项均为必填项</font>
+    <ul>
+	  <li class="ys_a"><b>用 户 名：</b><input name="company_username" type="text" class="ent_1" id="company_username" placeholder="用户名 " /></input> </li>
+	  <li class="ys_a"><b>用户密码：</b><input name="company_pass" type="password" class="ent_1" id="company_pass" placeholder="设置密码 "/></input></li>
+      <li class="ys_a"><b>确认密码：</b><input name="company_pass1" type="password" class="ent_1" id="company_pass1" placeholder="密码确认 "/></input></li>
+	  <li class="ys_a"><b>企 业 名：</b><input name="company_name" type="text" class="ent_1" id="company_name" placeholder="企业名 " /></input> </li>
+	  <li class="ys_a"><b>手 机 号：</b><input name="company_phone" type="text" class="ent_1" id="company_phone" placeholder="手机号 " /></input> </li>
+        <li class="ys_a"><b>电子邮箱：</b><input type="text" class="ent_1" name="company_email" id="company_email" placeholder="电子邮箱"/></input> </li>
+        <li class="ys_a"><b>税务登记证号：</b><input name="company_tax" type="text" class="ent_1" id="company_tax" placeholder="税务登记证号 "/></input></li>
+      <li>
+       <select name="tax_class" class=" ent_2"  id="tax_class">
+			<option value="">请选择税务所</option>
+			<option value="第二税务所">第二税务所</option>
+			<option value="第三税务所">第三税务所</option>
+			<option value="第四税务所">第四税务所</option>
+			<option value="第五税务所">第五税务所</option>
+			<option value="第六税务所">第六税务所</option>
+			<option value="第七税务所">第七税务所</option>
+			<option value="第八税务所">第八税务所</option>
+			<option value="第九税务所">第九税务所</option>
+			<option value="第十二税务所">第十二税务所</option>
+			<option value="不清楚所属税务所">不清楚所属税务所</option>
+		</select>
+      </li>
+
+    </ul>
+    <button  type="button" class="nextpage" id="submit-">注册</button> 
+    <a href="javascript:history.go(-1)"><button type="button" class="previous">返回</button> </a> 
+  </div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+$("#submit-").on("click",function(){
+	var company_name = $("#company_name").val();
+	var company_phone = $("#company_phone").val();
+	var company_pass = $("#company_pass").val();
+	var company_pass1 = $("#company_pass1").val();
+	var company_tax = $("#company_tax").val();
+	var company_username = $("company_username").val();
+	var company_class = $('input:radio[name="company_class"]:checked').val();
+    var company_email = $('#company_email').val();
+	var tax_class = $("#tax_class").val();
+	var flag = true;
+	if(company_name == ''){
+		layer.msg("公司名没填写哦！", 2, 3);
+		flag = false;
+	}else if(company_phone == ''){
+		layer.msg("手机号没填写哦！", 2, 3);
+		flag = false;
+	}else if(company_username == ''){
+		layer.msg("用户名没填写哦！", 2, 3);
+		flag = false;
+	}else if(company_pass == ''){
+		layer.msg("设置密码没填写哦！", 2, 3);
+		flag = false;
+	}else if(company_pass1 == ''){
+		layer.msg("确认密码没填写哦！", 2, 3);
+		flag = false;
+	}else if(company_tax == ''){
+		layer.msg("税务登记证号没填写哦！", 2, 3);
+		flag = false;
+	}else if(company_tax.length < 15 || company_tax.length > 20 ){
+		layer.msg("税务登记证号位数不对！", 2, 3);
+		flag = false;
+	}else if(company_class == ''){
+		layer.msg("公司类型没选择哦！", 2, 3);
+		flag = false;
+	}else if(tax_class == ''){
+		layer.msg("税务所没选择哦！", 2, 3);
+		flag = false;
+	}else if(!(/^13[0-9]{9}$|14[0-9]{9}|15[0-9]{9}$|18[0-9]{9}$/.test(company_phone))){
+		layer.msg("请输入正确的手机号哦！", 2, 3);
+		flag = false;
+	}else if(company_pass != company_pass1){
+		layer.msg("密码和确定密码不一样！", 2, 3);
+		flag = false;
+	}else if(company_pass.length<6){
+		layer.msg("密码长度需要6位数！", 2, 3);
+		flag = false;
+	} else if(!(/^[a-zA-Z0-9]+@[a-zA-z0-9]+\.[a-zA-z0-9]+$/).test(company_email)){
+        layer.msg("电子邮箱格式不正确！", 2, 3);
+        flag = false;
+    }
+	if(flag){
+	$.post("{:U('companyregister1')}",{'wecha_id':$("#wecha_id").val(),'company_name':$("#company_name").val(),'company_phone':$("#company_phone").val(),'company_tax':$("#company_tax").val(),'tax_class':$("#tax_class").val(),'company_pass':$("#company_pass").val(),'company_username':$("#company_username").val()},function(data){
+		if(data.status==1){
+			layer.msg("注册成功", 2, 1);
+			
+			setTimeout(function (){window.location=data.url;},1000);
+		}else{
+			layer.msg(data.content, 2, 3);
+			setTimeout(function (){$("#submit-").val("注册");},1000);
+		}
+   },'json');
+   }
+   });
+
+</script>
+

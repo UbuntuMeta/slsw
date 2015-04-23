@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>在此处插入标题</title>
+</head>
+<body>
+<style type="text/css">
+table.gridtable {
+	font-family: verdana,arial,sans-serif;
+	font-size:15px;
+	color:#333333;
+	border-width: 1px;
+	border-color: #666666;
+	border-collapse: collapse;
+}
+table.gridtable th {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #dedede;
+}
+table.gridtable td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #ffffff;
+}
+.td{
+     width:200px;
+	height:60px;
+     overflow:hidden;
+     text-overflow:ellipsis;
+     border:1px solid #ddd;}
+</style>
+	<table width="1400px" height="400px" border="1"  class="gridtable">
+		<tr>
+			<th scope="col">序号</th>
+			<th scope="col">回复对象</th>
+			<th scope="col">回复内容</th>
+			<th scope="col">评论时间</th>
+			<th scope="col">是否可见</th>
+			<th scope="col" width="50px">操作</th>
+		</tr>
+		<volist name="result" id="vo">
+		<tr>
+			<td>{$vo.reply_id}</td>
+			<td><div  class="td">{$vo.msg_descript}</div></td>
+			<td><div  class="td">{$vo.reply_descript}</div></td>
+			<td>{$vo.reply_date}</td>
+			<td>
+				<a
+					href="{:U('Sys/Reply/flag')}?id={$vo.reply_id}&flag={$vo.reply_flag}&now={$now}">
+					<img src="__SYSIMG__/flag_{$vo.reply_flag}.png" style="width:50px;height:50px;" />
+				</a>
+			</td>
+			<td>
+				<a href="{:U('Sys/Reply/delete')}?id={$vo.reply_id}&now={$now}"
+					onclick="return confirm('确实要删除该内容吗?')">[删除]</a>
+				<a href="{:U('Sys/Reply/updata')}?id={$vo.reply_id}"> [修改]</a>
+			</td>
+		</tr>
+		</volist>
+		<tr>
+			<td colspan="8">共 {$page}</td>
+		</tr>
+	</table>
+</body>
+</html>

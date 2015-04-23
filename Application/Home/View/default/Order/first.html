@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no" name="viewport">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<title>双流地税选择预约</title>
+<link type="text/css" rel="stylesheet" href="__STYLE__/css/css1.css">
+<script src="__WAP__/jquery-1.10.2.min.js"></script>
+<script src="/Public/static/laycode/layer.min.js" type="text/javascript"></script>
+
+</head>
+<body>
+
+<div class="top" >
+  <img src="__STYLE__/image/0_04.jpg" class="logo"><b> 预约服务</b>
+</div>
+<div class="clear"></div>
+
+<div class="make"><img src="__STYLE__/image/3_04.jpg" ><b>预约服务</b>  </div>
+<div class="clear"></div>
+
+<div class="box">
+	<div class="yuyue">
+	<div class="yuy">预约日期如下（可预约七天以内的日期）：</div>
+	<font color="red" size="2px">注意：必须提前一天预约和取消预约</font>
+	<!-- <form action="{:U('second')}" method="post" onsubmit="return mycheck()"> -->
+   <ul>
+   
+   
+   <volist name="volist" id="vo">
+   <li>
+   &nbsp;<input type="radio" name="so_id" id="so_id" class="cs1" value="{$vo.so_id}"><b>{$vo.so_xingqi},{$vo.so_date},可预约{$vo.so_peoplenum}人,已预约{$vo.so_orderpeople}人</b>
+   </li>
+   </volist>
+   
+   </ul>
+ </div>
+ <input name="wecha_id" type="hidden" id="wecha_id" value="{$wecha_id}"/>
+    
+  <button  type="button" class="nextpage" id="submit-">下一步</button> 
+  <a href="javascript:history.go(-1)"><button type="button" class="previous">上一步</button> </a>
+<!-- </form> -->
+
+</div>
+</body>
+</html>
+<script type="text/javascript">
+$("#submit-").on("click",function(){
+	var so_id = $('input:radio[name="so_id"]:checked').val();
+	
+	var flag = true;
+	 if(so_id == ''){
+		layer.msg("你还没有选择预约时间", 2, 3);
+		flag = false;
+	}/*else if(taxclass == ''){
+		layer.msg("税务所还没有选择哦！", 2, 3);
+		flag = false;
+	}*/
+
+	if(flag){
+	
+	$.post("{:U('firstdo')}",{'wecha_id':$("#wecha_id").val(),'so_id':so_id},function(data){
+		if(data.status==1){
+			layer.msg(data.content, 2, 1);
+			setTimeout(function (){window.location=data.url;},1000);
+		}else{
+			layer.msg(data.content, 2, 3);
+			setTimeout(function (){$("#submit-").val("注册");},1000);
+		}
+   },'json');
+   }
+   });
+
+</script>

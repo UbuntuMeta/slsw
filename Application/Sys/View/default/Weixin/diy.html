@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<link href="__CSS__/table_form.css" rel="stylesheet" type="text/css"/>
+
+<title>354</title>
+</head>
+<body>
+<div class="table-list">
+<table>
+	<tr class="header"> 
+      <td class="w50">编号</td>
+      <td class="w200">菜单名称</td>
+      <td class="w200">关键字</td>
+      <td class="w80">方法名</td>
+      <td class="w80">链接地址</td>
+      <td class="w80">显示顺序</td>
+      <td class="w50">状态</td>
+      <td class="center w80">具体操作</td>
+    </tr>
+    <volist name="list" id="item">
+    <tr> 
+      <td><strong>{$item.id}</strong></td>
+      <td><strong>{$item.title}</strong></td>
+      <td>{$item.wxkey}</td>
+      <td><strong><php>if((empty($item['url'])) && (empty($item['voo']))) echo $item['method'];</php></strong></td>
+      <td><strong><php>if($item['url']) echo "外链";</php></strong></td>
+      <td><strong>{$item.order1}</strong></td>
+      <td><strong><IMG style="cursor:pointer" onClick="setopen('{$item.id}','is_show')" id="is_show_{$item.id}" src="__CSS__/<if condition='$item.is_show eq 1 '>ok.gif<else/>no.gif</if>"></strong></td>
+      <td align="center"><strong><a href="{:U('add_diy',array('id'=>$item['id']))}" class="button">编辑</a><a href="{:U('del_diy',array('id'=>$item['id']))}" onclick="return confirm('您确实要执行删除？');" class="button" style="display:none">删除</a></strong></td>
+    </tr>
+    <volist name="item['voo']" id="sub">
+    <tr> 
+      <td>&nbsp;{$sub.id}</td>
+      <td>&nbsp;{$item.title} - {$sub.title}</td>
+      <td>&nbsp;{$sub.wxkey}</td>
+      <td>&nbsp;<php>if((empty($item['url'])) && (empty($sub['url']))) echo $sub['method']; if($sub['fun']){ echo "_".$sub['fun'];}</php></td>
+      <td>&nbsp;<php>if($sub['url']) echo "外链";</php></td>
+      <td>&nbsp;{$item.order1}_{$sub.order1}</td>
+      <td><IMG style="cursor:pointer" onClick="setopen('{$sub.id}','is_show')" id="is_show_{$sub.id}" src="__CSS__/<if condition='$sub.is_show eq 1 '>ok.gif<else/>no.gif</if>"></td>
+      <td align="center"><a href="{:U('add_diy',array('id'=>$sub['id']))}" class="button">编辑</a><a href="{:U('del_diy',array('id'=>$sub['id']))}" onclick="return confirm('您确实要执行删除？');" class="button" style="display:none">删除</a></td>
+    </tr>
+    
+    </volist>
+    </volist>
+    <tr>
+      <td colspan="8"  class="foots"><div class="footer"><a href="{:U('add_diy')}">添加菜单</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="{:U('creat_menu')}">生成DIY菜单</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(如果一级为外链,他的子菜单设置无效,同时链接为外链不能再添加内容到该栏目下面。)</div></td>
+      </tr>
+</table>
+</div>
+</body>
+</html>

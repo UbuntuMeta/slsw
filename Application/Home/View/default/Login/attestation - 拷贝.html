@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>竹叶青-用户认证</title>
+		<link rel="stylesheet" href="__WAP__/moble.min.css" />
+		<link rel="stylesheet" href="__WAP__/jquery.mobile.icons.min.css" />
+		<link rel="stylesheet" href="__WAP__/jquery.mobile.structure-1.4.1.min.css" />
+		<script src="__WAP__/jquery-1.10.2.min.js"></script>
+		<script src="__WAP__/jquery.mobile-1.4.1.min.js"></script>
+	</head>
+
+<body>
+		<div data-role="page" id="pageone">
+			<div data-role="header" data-position="inline">
+				<h1>用户认证</h1>
+			</div>
+            <div data-role="content" data-inset="true">
+    <input type="text" name="myphone" id="myphone" placeholder="输入您的手机号" value="">
+    <input name="send_phone" type="button" id="send_phone" value="发送手机验证码" onClick="send_phone();" data-theme="a">
+    <span id="_usercode">认证码2分钟内有效.如果点击"发送"按钮无效,请先输入号码后在滑动屏幕在点击"发送"按钮</span>
+<form action="{:U('Login/rz')}" method="post" target="_self" id="form1">
+<div class="ui-field-contain">
+    <label for="usercode">认证码:</label>
+    <input type="text" name="userpass" id="userpass" placeholder="手机验证码" value=""><input name="iTime" type="hidden" id="iTime" value="10"/><input name="wecha_id" type="hidden" id="wecha_id" value="{$wecha_id}"/>
+</div>
+<fieldset class="ui-grid-a">
+    <div class="ui-block-a"><input name="submit" type="button" id="submit-" value="立即绑定" data-theme="a"></div>
+    <div class="ui-block-b"><a href="{:U('Member/index')}" target="_self" class="ui-btn ui-corner-all" data-theme="b">暂不绑定</a></div>
+</fieldset>
+</form>
+</div>
+<div data-role="footer" data-position="fixed">
+<div data-role="navbar">
+<ul>
+<li><a href="http://sms.zhuyeqing-tea.com" target="_self">首页</a></li>
+<li><a href="http://ok.jd.com/m/index-11566.htm" target="_self">茶商城</a></li>
+<li><a href="{:U('Member/index')}"  class="ui-btn-active">会员</a></li>
+<li><a href="#">更多...</a></li>
+</ul>
+</div>
+	</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+$(document).on("pageinit","#pageone",function(){
+  $("#send_phone").on("click",function(){
+	  $.post("{:U('Get_captcha')}",{'phone':$("#myphone").val()},function(data){
+		  $("#_usercode").html(data.info);
+		if(data.status){
+			$("#send_phone").button( "disable" );
+		}else{
+			alert("系统忙！");
+		}
+   },'json');
+  });
+  
+    $("#submit-").on("click",function(){
+	  $.post("{:U('bind_captcha')}",{'captcha':$("#userpass").val()},function(data){
+		if(data.status){
+			//$("#myphone").hide();//.text( "disable" );
+			$("#send_phone").button( "disable" );//$( "[type='submit']" ).button( "enable" );
+			$("#_usercode").html(data.content);
+			window.location=data.url;
+		}else{
+			$("#_usercode").html(data.content);
+		}
+   },'json');
+  });
+});
+</script>

@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<link href="__CSS__/table_form.css" rel="stylesheet" type="text/css"/>
+<title></title>
+</head>
+<style>
+div a{padding:1px 3px; margin:3px; border:1px solid #d0d0d0; text-decoration:none}
+</style>
+<body>
+<div class="table-list">
+<table>
+	<tr class="header"> 
+    <td class="w80">编号</td>
+    <td>用户名</td>
+      <td>公司名</td>
+      <td>手机号</td>
+	  <td>税务登记证</td>
+      <td>公司类型</td>
+      <td class="w50">税务所</td>
+		<td>wecha_id</td>
+		<td>注册时间</td>
+    </tr>
+    <volist name="volist" id="item">
+    <tr> 
+      <td>{$item.company_id}</td>
+      <td>{$item.company_username}</td>
+      <td>{$item.company_name}</td>
+      <td>{$item.company_phone}</td>
+      <td>{$item.company_tax}</td>
+      <td>{$item.company_class}</td>
+	  <td>{$item.tax_class}</td>
+      <td>{$item.wecha_id}</td>
+      <td>{$item.company_date}</td>
+      
+    </tr>
+    </volist>
+    
+	<tr class="header"> 
+    <td colspan="3"><span class="current">共{$count}条</span>{$pager_bar}</td>
+    </tr>
+</table>
+</div>
+</body>
+</html>

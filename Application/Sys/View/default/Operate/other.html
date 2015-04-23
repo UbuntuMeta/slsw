@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<link href="__CSS__/table_form.css" rel="stylesheet" type="text/css"/>
+<script src="__STATIC__/js/jquery-1.11.1.min.js"></script>
+<script language="javascript" type="text/javascript" src="__STATIC__/My97DatePicker/WdatePicker.js"></script>
+<title>354</title>
+</head>
+<style>
+div a{padding:1px 3px; margin:3px; border:1px solid #d0d0d0; text-decoration:none}
+.input-texts {height: 20px;line-height: 20px;}
+</style>
+<body>
+<div class="header-data lr10">
+<form action="{:U('other')}" method="get" id="form1">
+<input name="mykey" type="text" class="input-texts" id="mykey" placeholder="操作关键字" value="{$mykey}"/><input name="mydate" type="text" id="mydate" onClick="WdatePicker({dateFmt:'yyyy-MM-dd',readOnly:true,maxDate:'%y-%M-%d'})" placeholder="查询日期" value="{$mydate}" class="input-texts"/>
+<input type="submit" name="button" id="button" value="查询"  class="button"/>
+</form>
+</div>
+<script>
+function doit(){
+location.href= '/index.php?m=Sys&c=Operate&a=other&mydate='+$('#mydate').val();
+}
+</script>
+<div class="table-list">
+<table>
+	<tr class="header">
+	  <td width="150">时间</td>
+    <td width="100">类型</td>
+    <td>操作</td>
+    
+    </tr>
+    <volist name="list" id="item">
+    <tr>
+      <td><php>echo date('Y-m-d H:i',$item['time'])</php></td> 
+    <td>{$item.type}</td>
+      <td>{$item.methods}</td>
+      
+      </tr>
+    </volist>
+    
+	<tr class="header"> 
+    <td colspan="3"><span class="current">共{$count}条</span>{$pager_bar}</td>
+    </tr>
+</table>
+</div>
+</body>
+</html>

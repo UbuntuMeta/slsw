@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<link href="__CSS__/table_form.css" rel="stylesheet" type="text/css"/>
+<script src="__STATIC__/js/jquery-1.11.1.min.js"></script>
+<title>354</title>
+</head>
+<style>
+div a{padding:1px 3px; margin:3px; border:1px solid #d0d0d0; text-decoration:none}
+</style>
+<body>
+<div class="table-list">
+<table>
+	<tr class="header"> 
+    <td>绑定号</td>
+    <td>卡号</td>
+    <td>姓名</td>
+    <td>性别</td>
+    <td>入会日期</td>
+    <td>绑定时间</td>
+    <td>同步时间</td>
+    <td width="110">操作</td>
+    </tr>
+    <volist name="list" id="item">
+    <tr> 
+      <td>{$item.uid}</td>
+      <td>{$item.card_no}</td>
+      <td>{$item.vip_name}</td>
+      <td>{$item.vip_sex}</td>
+      <td>{$item.oper_date}</td>
+      <td>{$item.addtime}</td>
+      <td>{$item.endtime}</td>
+      <td><input type="button" name="{$item.uid}" value="同步" onclick="check('{$item.uid}')" id="{$item.uid}"/></td>
+      </tr>
+    </volist>
+    
+	<tr class="header"> 
+    <td colspan="8"><span class="current">共{$count}条</span>{$pager_bar}</td>
+    </tr>
+</table>
+</div>
+</body>
+</html>
+<script>
+function check(id){
+	$("#"+id).val("同步查询中...");
+	$.post('__URL__/synchronization',{'id':id},function(data){
+		if (data.status==1){
+			$("#"+id).val("同步成功");
+			//setTimeout(function (){$("#"+id).val("同步");},2000);
+		}else{
+			$("#"+id).val("同步失败");
+			//setTimeout(function (){$("#"+id).val("同步");},2000);
+		}
+   },'json');
+}
+</script>

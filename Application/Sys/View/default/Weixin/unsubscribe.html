@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<link href="__CSS__/table_form.css" rel="stylesheet" type="text/css"/>
+<link href="__SYS__/images/skin.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__STATIC__/kindeditor-4.1.10/kindeditor.js"></script>
+<link rel="stylesheet" href="__STATIC__/kindeditor-4.1.10/themes/default/default.css" />
+<script src="__STATIC__/kindeditor-4.1.10/lang/zh_CN.js"></script>
+<script>
+  KindEditor.ready(function(K) {
+	  var editor = K.editor({
+					allowFileManager : true,
+					pasteType : 1,
+					filterMode:true,
+					resizeType:0,
+					fileManagerJson:"__STATIC__/kindeditor-4.1.10/php/file_manager_json.php?mypath=allimg",
+					urlType:"__APP__/UploadImages/allimg",
+					afterBlur: function(){this.sync()},
+					uploadJson : "__STATIC__/kindeditor-4.1.10/php/upload_json.php?mypath=allimg",
+	  });
+	  K('#upbutton').click(function() {
+		  editor.loadPlugin('image', function() {
+			  editor.plugin.imageDialog({
+				  imageUrl : K('#picurl').val(),
+				  clickFn : function(url, title, width, height, border, align) {
+					  var url_path=url;
+					  K('#picurl').val(url_path);
+					  editor.hideDialog();
+				  }
+			  });
+		  });
+	  });
+  });
+</script>
+<title>354</title>
+</head>
+<body>
+<div class="pad_10">
+<form action="{:U('update_unsubscribe')}" method="POST" name="form1" id="form1">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="table_form">
+<tr>
+      <th width="120">触发事件：</th>
+      <td >当用户关注，将会触发此回复。</td>
+    </tr>
+    <tr>
+      <th>回复标题：</th>
+      <td ><input name="title" type="text" id="title"   value="{$vo.title}" style="width:80%" required class="input-text"/>
+      <input name="id" type="hidden" id="id" value="{$vo.id}" /><input name="delimg" type="hidden" id="delimg" value="{$vo.picurl}" /></td>
+    </tr>
+    <tr>
+      <th>回复内容：</th>
+      <td >
+      <textarea name="description" id="description" style="width:80%; height:100px" required>{$vo.description}</textarea></td>
+    </tr>
+    <tr>
+      <th>回复图片：</th>
+      <td >
+      <input name="picurl" type="text" id="picurl" style="width:80%" value="{$vo.picurl}" readonly class="input-text"/>
+      <input type="button" name="upbutton" id="upbutton" value="预览..." class="button"/><php>if($vo['picurl']!="") {</php><img src='__STATIC__/images/small_img.gif'  border='0' onMouseOver="toolTip('<img src={$vo[picurl]}>')" onMouseOut="toolTip()"/> <php>}</php></td>
+    </tr>
+    <tr>
+      <th>链接地址：</th>
+      <td >
+      <input name="url" type="text" id="url" style="width:80%" value="{$vo.url}" class="input-text"/></td>
+    </tr>
+    <tr>
+      <th>回复方式：</th>
+      <td ><INPUT value="1"  type="radio" name="is_txt" <if condition='$vo.is_txt eq 1 '>CHECKED</if>>纯文字 <INPUT value="0" type="radio" name="is_txt" <if condition='$vo.is_txt eq 0 '>CHECKED</if>>图文混排</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td><input type="submit" name="dosubmit" id="dosubmit" class="button" value=" 确 定 ">
+        <input name="id" type="hidden" id="id" value="{$vo.id}" />
+      	<input type="button" name="dosubmit" id="dosubmit" class="button" value=" 返 回 " onclick="javascript:history.back(-1)">
+      </td>
+    </tr>
+        <tr>
+      <th>填写说明：</th>
+      <td><p>1、回复标题和回复内容必填。</p>
+        <p>2、当回复方式选择“纯文字”时，回复内容有效！</p>
+        <p>3、当“第三方接口”填写时，必须选择“图文混排”，否则无效！</p></td>
+    </tr>
+</table>
+</form>
+
+</div>
+</body>
+</html>
+<script language="javascript" src="__STATIC__/js/ToolTip.js"></script>

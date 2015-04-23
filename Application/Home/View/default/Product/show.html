@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>{$vo.name}</title>
+<meta name="description" content="{$vo.name}">
+<meta name="keywords" content="{$vo.name}">
+<script type="text/javascript" src="__STATIC__/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="__STYLE__/xjs/iscroll.js"></script>
+<style type="text/css" media="all">
+body,ul,li {
+	padding:0;
+	margin:0;
+	border:0;
+	list-style:none;
+}
+
+body {
+	font-size:12px;
+	-webkit-user-select:none;
+    -webkit-text-size-adjust:none;
+	font-family:helvetica;
+}
+
+a{ color:#000; text-decoration:none}
+
+#header {
+	position:fixed; z-index:2;
+	top:0; left:0;
+	width:100%;
+	height:45px;
+	line-height:45px;
+	background-color:#f8f8f8;
+	border-bottom:1px solid #f5f5f5;
+	/*background-image:-webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #fe96c9), color-stop(0.05, #d51875), color-stop(1, #7b0a2e));
+	background-image:-moz-linear-gradient(top, #fe96c9, #d51875 5%, #7b0a2e);
+	background-image:-o-linear-gradient(top, #fe96c9, #d51875 5%, #7b0a2e);*/
+	padding:0;
+	color:#000;
+	font-size:20px;
+	text-align:center;
+}
+
+#header a {
+	color:#000;
+	text-decoration:none;
+	font-weight:bold;
+}
+
+#footer {
+	position:absolute; z-index:2;
+	bottom:0; left:0;
+	width:100%;
+	height:48px;
+	background-color:#f8f8f8;
+	border-top:1px solid #f5f5f5;
+	/*background-image:-webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #999), color-stop(0.02, #666), color-stop(1, #222));
+	background-image:-moz-linear-gradient(top, #999, #666 2%, #222);
+	background-image:-o-linear-gradient(top, #999, #666 2%, #222);*/
+	padding:0;
+}
+
+
+#myFrame {
+	position:absolute;
+	top:0; left:0;
+}
+.ui-title{min-height: 45px; text-align: center; font-size: 16px; font-weight:normal; display: block; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; outline: 0 !important; text-indent: -10px;}
+.ui-btn-left { position:absolute; top:0px; left:0px; background:url(__STYLE__/image/menu.png) no-repeat center center; display:block; width:50px; height:44px;text-indent: -9999px; margin:0; padding:0; background-size:24px auto;}
+.ui-btn-left_pre { position:absolute; top:0px; left:0px; background:url(__STYLE__/image/pre.png) no-repeat center center; display:block; width:50px; height:44px;text-indent: -9999px; margin:0; padding:0; background-size:24px auto;}
+.ui-btn-right { position:absolute; top:0px; right:0px; background:url(__STYLE__/image/Refresh.png) no-repeat center center; display:block; width:50px; height:44px;text-indent: -9999px;margin:0; padding:0; background-size:28px auto;}
+.ui-btn-right_menu { position:absolute; top:0px; right:0px; background:url(__STYLE__/image/menu.png) no-repeat center center; display:block; width:50px; height:44px;text-indent: -9999px; margin:0; padding:0; background-size:24px auto;}
+.ui-btn-right_home { position:absolute; top:0px; right:0px; background:url(__STYLE__/image/home.png) no-repeat center center; display:block; width:50px; height:44px;text-indent: -9999px; margin:0; padding:0; background-size:24px auto;}
+
+#popmenu{cursor:pointer; display:block; position:relative;  text-align: center; width: 200px; margin:0 auto}
+#popmenu:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    margin-top: -2px;
+    border-width: 5px 5px 0 5px;
+    border-style: solid;
+    border-color: #9D9D9D transparent;
+}
+#overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:#fff;opacity:0;filter:alpha(opacity=0);display:none;z-index: 4; height:auto !important}
+
+#win{position:absolute;top:55px;left:50%;width: 200px;margin:0 0 0 -100px;display:none;z-index: 5;}
+
+
+.dropdown {
+    /* Size and position */
+    position: relative;
+	display:block;
+    margin: 0 auto;
+    padding: 5px;
+
+    /* Styles */
+    background-color: rgba(47, 47, 47, 1);
+    border-radius: 7px;
+    border: 1px solid rgba(0,0,0,0.15);
+	box-shadow:0 0 10px 2px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow:0 0 10px 2px rgba(0, 0, 0, 0.15);
+	-webkit-box-shadow:0 0 10px 2px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    outline: none;
+	list-style: none outside none;
+	height:78px;
+
+}
+
+.dropdown:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 100%;
+    right: 90px;
+    border-width: 0 6px 6px 6px;
+    border-style: solid;
+    border-color: rgba(47, 47, 47, 0.9) transparent;    
+}
+
+.dropdown:before {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 100%;
+    right: 88px;
+    border-width: 0 8px 8px 8px;
+    border-style: solid;
+    border-color: rgba(0,0,0,0.1) transparent;    
+}
+.dropdown li {
+    background-color: rgba(58, 58, 58, 1);
+    display: block;
+    float: left;height: 37px;
+    width: 50%;
+}
+.dropdown li span{
+    border-color: #494949 #181818 #181818 #494949;
+    border-left: 1px solid #494949;
+    border-style: solid;
+    border-width: 1px;
+    color: #FFFFFF;
+	line-height: 37px;
+    display: block;
+    font-size: 15px;
+    height: 37px;
+    text-align: center;
+    text-shadow: 0 2px 2px #000000;
+    width: 100%;
+}
+.dropdown li:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.tit{ margin-bottom:2px;}
+.tit h1{ font-size:26px;}
+.tit p{height:18px;}
+.tests{ padding:5px; line-height:17px; font-size:12px; border:1px solid #ffeef2; margin-top:2px;-webkit-border-radius:3px; border-radius:3px;}
+.tests label{ color:#900; font-weight:bold;}
+.txt p img,.txt img{ border:0; max-width:100%}
+
+.picurl{ display:block; width:100%; margin-top:46px;}
+.picurl img{ width:100%}
+
+.content{display:block; width:100%; background:#f7f6f6;}
+.return{position:absolute; left:4%; top:2%; }
+.return img{ width:60%;}
+.title_a{ width:98%; margin:0 1% 0 1%; text-align:center;  border-bottom:1px solid #e5e5e5; line-height:150%; padding:2% 0 2% 0; color: #666666;  }
+.content ul{ width:100%; display:block;}
+.content ul li{   display:block; }
+.sw1{ text-align:center; background:#FFFFFF; width:100%; }
+.sw1 img{ width:90%; padding:0 5% 0 5%;}
+.sw2{text-align:center; line-height:30px; font-size:1.5em; color:#555555; font-weight:bold; background:#f7f6f6; border-bottom:1px solid #FFFFFF; color: #666666; }
+.sw2 b{ font-weight:normal; font-size:0.9em; }
+.shangp{ padding-left:3%; border-bottom:1px solid #e4e4e4; line-height:50px; font-size:2.1em;}
+.xinx{padding-left:3%; background:#ffffff;}
+.xinx h1{ font-size:1.0em; color:#88873d; padding:2% 0 2% 0;  }
+.infos{ padding:2%}
+.infos p,.infos span{ line-height:22px;}
+.infos img, .infos p img{ border:0; max-width:100%}
+</style>
+</head>
+<body>
+
+<div id="header">
+<div id="ui-header">
+<a class="ui-title" id="popmenu">选择价格</a>
+<a class="ui-btn-left_pre" href="javascript:history.go(-1)"></a>
+<a class="ui-btn-right_home" href="__SELF__"></a>
+</div>
+<div id="overlay"></div>
+<div id="win">
+<ul class="dropdown">
+<li><a href="{:U('index',array('typeid'=>'100'))}"><span>0 - 200元</span></a></li>
+<li><a href="{:U('index',array('typeid'=>'101'))}"><span>200-500元</span></a></li>
+<li><a href="{:U('index',array('typeid'=>'102'))}"><span>500-1500元</span></a></li>
+<li><a href="{:U('index',array('typeid'=>'103'))}"><span>1500元以上</span></a></li>
+<div class="clr"></div>
+</ul>
+</div>
+</div>
+<div class="picurl"><img src="{$piclist}"/></div>
+<div class="content" >
+  <ul>
+    <li class="sw2">{$vo.name}<br /><b>货号：{$vo.bn} 价格：￥{$vo.price} </b>   </li>
+    <li class="shangp">商品信息</li>
+    
+  </ul>
+</div>
+<div class="infos">
+{$vo.intro}
+</div>
+<script>
+window.onload = function ()
+{
+var oWin = document.getElementById("win");
+var oLay = document.getElementById("overlay");	
+var oBtn = document.getElementById("popmenu");
+var oClose = document.getElementById("close");
+oBtn.onclick = function ()
+{
+oLay.style.display = "block";
+oWin.style.display = "block"	
+};
+oLay.onclick = function ()
+{
+oLay.style.display = "none";
+oWin.style.display = "none"	
+}
+};
+</script>
+</body>
+</html>
