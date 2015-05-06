@@ -83,7 +83,6 @@ class MemberController extends UserWxController {
         $From2 = D($modelname);
         $cuser_exist = false;
         if ($res2 = $From2->where(array('company_email' => $user_email))->find()) {
-            var_dump($res);die();
             $jres2 = self::ResetPwd($modelname, $res2, $From2);
             $cuser_exist = true;
         }
@@ -97,6 +96,71 @@ class MemberController extends UserWxController {
                 echo $jres;
             }
         }
+
+    }
+    public function setPwd () {
+        if ($_GET['user_id']) {
+            $id = $_GET['user_id'] + 0;
+            $From1 = D('user');
+            if ($res = $From1->where(array('user_id' => $id))->find()) {
+                $this->assign('user_type', 'user');
+                $this->assign('id', $id);
+            } else {
+                echo '沒有账号存在!';
+                die();
+            }
+
+        } else if ($_GET['company_id']) {
+            $id = $_GET['company_id'] + 0;
+            $From1 = D('company');
+            if ($res = $From1->where(array('company_id' => $id))->find()) {
+                $this->assign('user_type', 'company');
+                $this->assign('id', $id);
+            } else {
+                echo '沒有账号存在!';
+                die();
+            }
+        }
+        $this->display();
+    }
+
+
+    public function ChangePwd() {
+        if (isset($_POST['id'])&&isset($_POST['user_type'])&&isset($_POST['new_pwd'])) {
+            if (in_array($_POST['user_type'], array('user', 'company'))) {
+                $modelname = $_POST['user_type'];
+            } else {
+                echo 'error param';
+                die();
+            }
+            $id = $_POST['id'] + 0;
+            $From1 = D($modelname);
+            if (strlen($_POST['new_pwd']) < 6) {
+                echo '密码不能小于6位！';
+                die();
+            }
+            $newPwd = md5($_POST['new_pwd']);
+            if ($res = $From1->where(array($modelname . '_id' => $id))->find()) {
+                $query = $From1->where(array($modelname . '_id' => $id))
+                    ->save(array($modelname . '_pass' => $newPwd));
+                if ($query) {
+                    echo 'success';
+                    die();
+                } else {
+                    echo "更新失败，和之前设置的密码一样";
+                    die();
+                }
+
+            } else {
+                echo '该账号不存在!';
+                die();
+
+            }
+        } else {
+            echo '参数有错误';
+            die();
+        }
+
 
     }
 
@@ -133,7 +197,7 @@ class MemberController extends UserWxController {
             $mail->AddAddress($address, "亲");//添加收件人（地址，昵称）
 
             $mail->IsHTML(true); //支持html格式内容
-            $mail->Body = '你好, <b>用户:' . $res[$modelname . '_name'] . '</b>!你已经申请找回密码! <br/>
+            $mail->Body = '你好, <b>用户:' . $res[$modelname . '_username'] . '</b>!你已经申请找回密码! <br/>
                     你临时密码为:' . $new_pwd . '
                     <br/>
                     登录后,请重置密码!
@@ -155,7 +219,7 @@ class MemberController extends UserWxController {
 			$where['wecha_id'] = $wecha_id;
 			$where['status'] = 1;
 			$From1 = D('company');
-			$com = $From1->field('company_id','company_name','company_phone','company_tax','company_class','tax_class')->where($where)->find();
+			$com = $From1->where($where)->find();
 			if($com){
 			$_SESSION['user_id']=$com['company_id'];
 			}else{

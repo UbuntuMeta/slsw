@@ -32,6 +32,7 @@
   </div>
   <div class="jg">
   <a href="/dswx/index.php/Home/Member/userupdate"><button  type="button" class="jbang" id="submit-">修改信息</button></a>
+      <a href="/dswx/index.php/Home/Member/setPwd?user_id=<?php echo ($user["user_id"]); ?>"><button type="button" class="jbang_b" name="bangding" >修改密码</button></a>
  <a href="<?php echo U('Login/loginoutshow');?>"> <button type="button" class="jbang_b" name="bangding" >注销</button></a>
   </div>
   <div class="jg">
@@ -68,6 +69,6 @@
    },'json');
    }
    );
-   
-   
+
+
    </script>

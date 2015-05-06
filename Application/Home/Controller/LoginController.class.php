@@ -507,9 +507,18 @@ class LoginController extends UserWxController {
 		$this->display();
 	}
 	public function login(){
-		
+		$op = $_GET['op'];
+        if ($op == 'appointment') {
+            $this->assign('has_new', false);
+        } else {
+            $this->assign('has_new', true);
+        }
 		$this->display();
 	}
+
+    public function RetrievePassword(){
+        $this->display();
+    }
 	
 	public function login1($msg=''){
 		$this->assign('msg',$msg);

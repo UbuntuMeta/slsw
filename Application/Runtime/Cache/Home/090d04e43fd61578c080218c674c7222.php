@@ -32,8 +32,8 @@
       <li class="ys_a"><b>税务登记证号：</b><input type="text" class="ent_1" id="company_tax" name="company_tax" placeholder="税务登记证号 "/></input></li>
       <li>
           <select name="tax_class" class="ent_2"  id="tax_class">
-			<option value="">请选择税务所</option>
-			<option value="第二税务所">第二税务所</option>
+			<option value="">请选择税务所</option所>
+			<option value="第二税务所">第二税务</option>
 			<option value="第三税务所">第三税务所</option>
 			<option value="第四税务所">第四税务所</option>
 			<option value="第五税务所">第五税务所</option>
@@ -125,7 +125,8 @@ $("#submit-").on("click",function(){
     }
 
 	if(flag){
-		$.post("<?php echo U('companyregister');?>",{'wecha_id':$("#wecha_id").val(),'company_name':$("#company_name").val(),'company_phone':$("#company_phone").val(),'company_tax':$("#company_tax").val(),'tax_class':$("#tax_class").val(),'company_class':company_class,'company_pass':$("#company_pass").val(),'company_username':$("#company_username").val()},function(data){
+		$.post("<?php echo U('companyregister');?>",{'wecha_id':$("#wecha_id").val(),'company_name':$("#company_name").val(),'company_phone':$("#company_phone").val(),'company_tax':$("#company_tax").val(),'tax_class':$("#tax_class").val(),'company_class':company_class,'company_pass':$("#company_pass").val(),
+            'company_username':$("#company_username").val(),'company_email': $('#company_email').val()},function(data){
 			if(data.status==1){
 				layer.msg("注册成功", 2, 1);
 				

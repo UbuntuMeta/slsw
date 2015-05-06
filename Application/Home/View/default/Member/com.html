@@ -7,7 +7,7 @@
 <title>个体工商户信息管理</title>
 <link type="text/css" rel="stylesheet" href="__STYLE__/css/css2.css">
 <script src="__WAP__/jquery-1.10.2.min.js"></script>
-<script src="/Public/static/laycode/layer.min.js" type="text/javascript"></script>
+<script src="__PUBLIC__/static/laycode/layer.min.js" type="text/javascript"></script>
 
 </head>
 <body>
@@ -31,6 +31,7 @@
   </div>
   <div class="jg">
  <a href="__URL__/updatecom"> <button  type="button"  class="jbang" id="submit-">修改信息</button> </a>
+      <a href="__URL__/setPwd?company_id={$com.company_id}"><button type="button" class="jbang_b" name="bangding" >修改密码</button></a>
 <a href="{:U('Login/loginoutshow')}"> <button type="button" class="jbang_b" name="bangding" >注销</button></a>
   </div>
   <div class="jg">
